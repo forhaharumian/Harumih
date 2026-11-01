@@ -1,0 +1,2445 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#18392b">
+<title>The Mystery Garden ♡</title><style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+
+:root {
+    --forest: #18392b;
+    --deep: #10271d;
+    --sage: #a8c5a0;
+    --pink: #efa9bb;
+    --hot: #ff7caa;
+    --cream: #fff5e9;
+    --muted: #b8c9b7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse at top, #294d38, transparent 65%),
+        var(--deep);
+    color: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+button {
+    font-family: inherit;
+}
+
+.ambient {
+    position: fixed;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: .18;
+    pointer-events: none;
+}
+
+.ambient.one {
+    background: var(--hot);
+    top: 10%;
+    left: -130px;
+}
+
+.ambient.two {
+    background: var(--sage);
+    bottom: 5%;
+    right: -130px;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    width: min(100% - 36px, 540px);
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 24px 0;
+    border-bottom: 1px solid #ffffff20;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.brand {
+    color: var(--pink);
+    font-weight: 700;
+}
+
+.chapter {
+    color: var(--muted);
+}
+
+.screen {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 45px 0;
+    text-align: center;
+    animation: appear .65s ease both;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.flower {
+    width: 84px;
+    height: 84px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 28px;
+    border: 1px solid #efa9bb55;
+    border-radius: 50%;
+    background: #efa9bb10;
+    font-size: 36px;
+    box-shadow: 0 0 45px #efa9bb12;
+}
+
+.eyebrow {
+    color: var(--sage);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    margin-bottom: 17px;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: clamp(46px, 12vw, 68px);
+    line-height: 1.08;
+    letter-spacing: -2px;
+}
+
+h1 span {
+    color: var(--pink);
+    font-style: italic;
+}
+
+h2 {
+    color: var(--pink);
+    font-size: clamp(30px, 8vw, 40px);
+    margin-bottom: 20px;
+}
+
+.description {
+    max-width: 340px;
+    margin-top: 20px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 28px 0;
+    color: var(--pink);
+}
+
+.divider span {
+    width: 42px;
+    height: 1px;
+    background: #efa9bb66;
+}
+
+.btn {
+    width: 100%;
+    max-width: 310px;
+    padding: 17px 19px;
+    border: 1px solid var(--pink);
+    border-radius: 4px;
+    background: var(--pink);
+    color: var(--deep);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.btn:hover {
+    background: var(--hot);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px #ff7caa25;
+}
+
+.note {
+    margin-top: 23px;
+    color: #91a997;
+    font-size: 10px;
+}
+
+.letter {
+    width: 100%;
+    margin: 10px 0 25px;
+    padding: 28px 24px;
+    border: 1px solid #efa9bb40;
+    border-radius: 7px;
+    background: #fff5e908;
+    text-align: left;
+    line-height: 1.9;
+}
+
+.stamp {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 24px;
+    border: 1px solid var(--pink);
+    border-radius: 50%;
+    color: var(--pink);
+    font-size: 21px;
+}
+
+.greeting {
+    margin-bottom: 12px;
+    color: var(--pink);
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+}
+
+.letter p:not(.greeting) {
+    margin-bottom: 15px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.signature {
+    color: var(--pink) !important;
+    font-style: italic;
+}
+
+.puzzle-card {
+    width: 100%;
+    margin: 12px 0 25px;
+    padding: 25px 18px;
+    border: 1px dashed #efa9bb66;
+    border-radius: 7px;
+    background: #efa9bb08;
+}
+
+.puzzle-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.puzzle-card p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.puzzle-card small {
+    display: block;
+    margin-top: 15px;
+    color: var(--sage);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+  .garden-button {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px 42px 15px 19px;
+    margin-top: 12px;
+    box-sizing: border-box;
+
+    background: linear-gradient(
+        135deg,
+        #efa9bb,
+        #f7c7d3
+    );
+
+    color: #18392b;
+    border: 1px solid rgba(255, 245, 233, 0.5);
+    border-radius: 14px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    text-align: center;
+
+    box-shadow: 0 5px 20px rgba(239, 169, 187, 0.15);
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.garden-button > span:first-child {
+    flex: 1;
+    text-align: center;
+}
+
+.garden-button .button-arrow {
+    position: absolute;
+    right: 17px;
+    font-size: 20px;
+    transition: transform 0.25s ease;
+}
+
+.garden-button:active {
+    transform: scale(0.97);
+}
+
+.garden-button:hover {
+    box-shadow: 0 7px 25px rgba(239, 169, 187, 0.3);
+}
+
+.garden-button:hover .button-arrow {
+    transform: translate(3px, -3px);
+}
+
+.reward-card {
+    margin-top: 25px;
+    padding: 25px 20px;
+
+    background: linear-gradient(
+        160deg,
+        rgba(239, 169, 187, 0.12),
+        rgba(168, 197, 160, 0.06)
+    );
+
+    border: 1px solid rgba(239, 169, 187, 0.4);
+    border-radius: 18px;
+    text-align: center;
+
+    animation: rewardAppear 0.8s ease both;
+}
+
+.reward-card[hidden] {
+    display: none;
+}
+
+.reward-flower {
+    font-size: 38px;
+    margin-bottom: 12px;
+    animation: flowerBloom 1.2s ease both;
+}
+
+.reward-label {
+    color: #a8c5a0;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    margin-bottom: 12px;
+}
+
+.reward-card h3 {
+    color: #efa9bb;
+    font-size: 23px;
+    margin: 0 0 16px;
+}
+
+.reward-message {
+    color: #fff5e9;
+    font-size: 14px;
+    line-height: 1.9;
+    font-weight: 400;
+}
+
+.reward-divider {
+    color: #efa9bb;
+    letter-spacing: 5px;
+    margin: 20px 0;
+}
+
+.reward-footer {
+    color: #a8c5a0;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+@keyframes rewardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flowerBloom {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(-15deg);
+    }
+
+    70% {
+        transform: scale(1.15) rotate(5deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+  .date-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin: 24px 0;
+}
+
+.date-inputs input {
+    width: 82px;
+    height: 58px;
+    box-sizing: border-box;
+
+    background: rgba(239, 169, 187, 0.07);
+    color: #fff5e9;
+
+    border: 1px solid rgba(239, 169, 187, 0.45);
+    border-radius: 16px;
+
+    font-family: inherit;
+    font-size: 21px;
+    font-weight: 600;
+    text-align: center;
+
+    outline: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+
+    transition: all 0.25s ease;
+}
+
+.date-inputs input::placeholder {
+    color: #a8c5a0;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.date-inputs input:focus {
+    border-color: #efa9bb;
+    background: rgba(239, 169, 187, 0.13);
+    box-shadow: 0 0 18px rgba(239, 169, 187, 0.15);
+    transform: translateY(-2px);
+}
+
+.date-inputs span {
+    color: #efa9bb;
+    font-size: 22px;
+    opacity: 0.8;
+}
+
+  /* ===== LIBRARY ===== */
+
+#libraryScreen {
+    position: relative;
+    overflow: hidden;
+}
+
+.library-instruction {
+    color: #a8c5a0;
+    font-size: 13px;
+    margin: 25px 0 20px;
+    letter-spacing: 0.4px;
+}
+.book-shelf {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: flex-end;
+gap: 12px;
+width: 100%;
+max-width: 390px;
+margin: 0 auto;
+padding: 20px 12px 12px;
+box-sizing: border-box;
+perspective: 800px;
+}
+
+.book-option {
+display: block;
+flex: 1 1 0;
+min-width: 0;
+max-width: 120px;
+margin: 0;
+padding: 0;
+border: none;
+background: transparent;
+color: #fff5e9;
+cursor: pointer;
+font-family: inherit;
+text-align: center;
+transition: transform 0.3s ease;
+}
+
+.book-option:hover {
+transform: translateY(-7px);
+}
+
+.book-option:active {
+transform: scale(0.95);
+}
+.book {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 0.72;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px 11px 11px 5px;
+    box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.35);
+    transition:
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.book-spine {
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 9px;
+    background: rgba(0, 0, 0, 0.16);
+    border-right: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.book-cover {
+    position: absolute;
+    inset: 7px 7px 7px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 2px 7px 7px 2px;
+}
+
+.pink-book {
+    background: linear-gradient(145deg, #f3b5c6, #bd6e8a);
+}
+
+.green-book {
+    background: linear-gradient(145deg, #a8c5a0, #456c51);
+}
+
+.blue-book {
+    background: linear-gradient(145deg, #8cbbe8, #355b96);
+}
+
+.pink-book .book-cover {
+    border-color: rgba(255, 245, 233, 0.55);
+}
+
+.green-book .book-cover {
+    border-color: rgba(255, 245, 233, 0.45);
+}
+
+.blue-book .book-cover {
+    border-color: rgba(255, 245, 233, 0.6);
+}
+
+.book-symbol {
+    font-size: clamp(20px, 6vw, 29px);
+    color: #fff5e9;
+}
+
+.book-name {
+    font-size: clamp(9px, 2.6vw, 12px);
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    color: #fff5e9;
+}
+
+.book-decoration {
+    font-size: 12px;
+    color: #fff5e9;
+}
+
+.book-caption {
+    display: block;
+    margin-top: 13px;
+    font-size: 10px;
+    line-height: 1.5;
+    color: #fff5e9;
+    opacity: 0.85;
+}
+
+.library-feedback {
+    min-height: 28px;
+    color: #efa9bb;
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 15px 0;
+}
+
+/* ===== BUTTERFLIES ===== */
+
+.butterfly-container {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.butterfly {
+    position: absolute;
+    z-index: 5;
+    font-size: 25px;
+    animation: butterflyFly 1.8s ease-out forwards;
+}
+
+@keyframes butterflyFly {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0) scale(0.3) rotate(0deg);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate(var(--fly-x), -100px)
+                   scale(1.1) rotate(20deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(
+            calc(var(--fly-x) * 1.5),
+            -190px
+        ) scale(0.6) rotate(-20deg);
+    }
+}
+
+/* ===== POEM CARD ===== */
+
+.poem-card {
+    margin-top: 25px;
+    padding: 24px 18px;
+    border: 1px solid rgba(140, 187, 232, 0.55);
+    border-radius: 20px;
+    background: linear-gradient(
+        160deg,
+        rgba(92, 139, 196, 0.15),
+        rgba(239, 169, 187, 0.06)
+    );
+    animation: rewardAppear 0.8s ease both;
+}
+
+.poem-card[hidden] {
+    display: none;
+}
+
+.poem-flower {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.poem-card h3 {
+    color: #8cbbE8;
+    font-size: 23px;
+    margin: 12px 0;
+}
+
+.poem-intro {
+    color: #fff5e9;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.poem-divider {
+    color: #8cbbe8;
+    letter-spacing: 5px;
+    margin: 20px 0;
+}
+
+.poem-text {
+    color: #fff5e9;
+    font-size: 14px;
+    line-height: 2;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    margin: 20px 0;
+    padding: 15px 10px;
+    border-left: 2px solid #8cbbe8;
+    text-align: left;
+}
+
+.book-option:disabled {
+    cursor: default;
+    opacity: 0.65;
+}
+/* ===== MYSTERY 003: THE DICTIONARY OF US ===== */
+
+.dictionary-container {
+width: min(100% - 32px, 520px);
+margin: 0 auto;
+padding: 36px 0 55px;
+text-align: center;
+box-sizing: border-box;
+}
+
+.dictionary-title {
+font-size: clamp(30px, 8vw, 42px);
+line-height: 1.15;
+margin: 12px 0;
+color: #f1d4df;
+}
+
+.dictionary-intro {
+max-width: 350px;
+margin: 0 auto 24px;
+color: #d0d8ce;
+line-height: 1.8;
+font-size: 14px;
+}
+
+.word-list {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 8px;
+margin: 22px 0;
+}
+
+.word-tag {
+padding: 7px 11px;
+border: 1px solid #526c58;
+border-radius: 20px;
+color: #d7e2d2;
+font-size: 11px;
+letter-spacing: 1px;
+transition: 0.3s;
+}
+
+.word-tag.found {
+background: #d8a8bd;
+color: #1a241c;
+border-color: #d8a8bd;
+text-decoration: line-through;
+}
+
+.word-search-instruction {
+color: #d9b6c5;
+font-size: 12px;
+line-height: 1.7;
+margin: 18px 0;
+}
+
+.word-grid {
+display: grid;
+grid-template-columns: repeat(10, minmax(0, 1fr));
+gap: 4px;
+width: 100%;
+max-width: 410px;
+margin: 0 auto 22px;
+user-select: none;
+}
+
+.letter-cell {
+aspect-ratio: 1;
+display: flex;
+align-items: center;
+justify-content: center;
+min-width: 0;
+padding: 0;
+border: 1px solid #3d5945;
+border-radius: 5px;
+background: #17271d;
+color: #edf0e8;
+font-family: inherit;
+font-size: clamp(11px, 3.2vw, 16px);
+font-weight: 600;
+cursor: pointer;
+transition: background 0.15s, color 0.15s, transform 0.15s;
+}
+
+.letter-cell.selected {
+background: #d8a8bd;
+color: #17271d;
+border-color: #d8a8bd;
+transform: scale(0.94);
+}
+
+.letter-cell.word-found {
+background: #526f59;
+color: #ffffff;
+border-color: #79977e;
+}
+
+.word-feedback {
+min-height: 25px;
+margin: 10px 0 20px;
+color: #e4bdce;
+font-size: 13px;
+line-height: 1.6;
+}
+
+.dictionary-reset {
+display: block;
+margin: 12px auto 20px;
+padding: 8px 14px;
+background: transparent;
+border: 1px solid #526c58;
+border-radius: 20px;
+color: #d0d8ce;
+font-family: inherit;
+font-size: 12px;
+cursor: pointer;
+}
+
+.dictionary-entries {
+display: grid;
+gap: 14px;
+margin-top: 26px;
+text-align: left;
+}
+
+.dictionary-entry {
+padding: 19px;
+border: 1px solid #526c58;
+border-radius: 13px;
+background: rgba(23, 39, 29, 0.8);
+animation: dictionaryReveal 0.45s ease both;
+}
+
+.dictionary-entry h3 {
+margin: 0 0 10px;
+color: #e8b8ca;
+font-size: 18px;
+letter-spacing: 2px;
+}
+
+.part-of-speech {
+color: #9bb39b;
+font-size: 11px;
+font-style: italic;
+}
+
+.dictionary-entry .definition {
+color: #f0f0e8;
+line-height: 1.7;
+font-size: 13px;
+}
+
+.dictionary-entry .hidden-meaning {
+padding-top: 12px;
+margin-top: 12px;
+border-top: 1px solid #405844;
+color: #e3b7c9;
+font-size: 13px;
+line-height: 1.8;
+}
+
+.dictionary-ending {
+margin-top: 30px;
+padding: 25px 20px;
+border: 1px solid #d0a2b6;
+border-radius: 15px;
+background: rgba(216, 168, 189, 0.08);
+color: #f2e7ec;
+line-height: 1.9;
+animation: dictionaryReveal 0.7s ease both;
+}
+
+.dictionary-ending h2 {
+color: #e8b8ca;
+font-size: 22px;
+line-height: 1.4;
+}
+
+.ending-signature {
+margin-top: 20px;
+color: #b5c9b2;
+font-size: 12px;
+letter-spacing: 1px;
+}
+
+/* ===== POP-UP MEANING ===== */
+
+.meaning-modal[hidden],
+.dictionary-ending[hidden] {
+display: none !important;
+}
+
+.meaning-modal {
+position: fixed;
+inset: 0;
+z-index: 9999;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 22px;
+box-sizing: border-box;
+background: rgba(5, 12, 7, 0.82);
+backdrop-filter: blur(7px);
+-webkit-backdrop-filter: blur(7px);
+animation: modalFadeIn 0.25s ease both;
+}
+
+.meaning-card {
+width: 100%;
+max-width: 390px;
+max-height: 85vh;
+overflow-y: auto;
+box-sizing: border-box;
+padding: 27px 23px;
+border: 1px solid #d0a2b6;
+border-radius: 18px;
+background: #17271d;
+color: #f2e7ec;
+text-align: center;
+box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+animation: modalCardReveal 0.4s ease both;
+}
+
+.meaning-card h2 {
+margin: 12px 0 18px;
+color: #e8b8ca;
+font-size: 27px;
+letter-spacing: 2px;
+}
+
+.modal-definition {
+color: #f0f0e8;
+font-size: 14px;
+line-height: 1.8;
+}
+
+.modal-hidden-meaning {
+margin: 20px 0;
+padding: 16px 0 5px;
+border-top: 1px solid #405844;
+color: #e3b7c9;
+font-size: 14px;
+line-height: 1.9;
+}
+
+.meaning-card .garden-button {
+width: 100%;
+margin-top: 12px;
+}
+
+@keyframes dictionaryReveal {
+from {
+opacity: 0;
+transform: translateY(12px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes modalFadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+
+@keyframes modalCardReveal {
+from {
+opacity: 0;
+transform: translateY(18px) scale(0.97);
+}
+to {
+opacity: 1;
+transform: translateY(0) scale(1);
+}
+  }
+
+  .story-container {
+width: min(100% - 32px, 520px);
+margin: 0 auto;
+padding: 36px 0 55px;
+text-align: center;
+box-sizing: border-box;
+}
+
+.story-title {
+font-size: clamp(32px, 8vw, 43px);
+line-height: 1.15;
+color: #f1d4df;
+margin: 12px 0;
+}
+
+.story-intro,
+.story-description {
+max-width: 350px;
+margin: 18px auto;
+color: #d0d8ce;
+font-size: 14px;
+line-height: 1.9;
+}
+
+.story-book-icon {
+font-size: 55px;
+margin: 28px 0;
+filter: drop-shadow(0 0 15px rgba(216, 168, 189, 0.25));
+}
+
+.story-progress {
+margin: 28px 0 12px;
+color: #d8a8bd;
+font-size: 11px;
+letter-spacing: 2px;
+}
+
+.story-paper {
+padding: 24px 21px;
+border: 1px solid #526c58;
+border-radius: 13px;
+background: #1b2b20;
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.story-paragraph {
+margin: 0;
+color: #f0eee7;
+font-size: 15px;
+line-height: 2;
+text-align: left;
+}
+
+.story-blank {
+display: inline-block;
+min-width: 72px;
+padding: 0 5px;
+color: #e8b8ca;
+border-bottom: 2px dashed #d8a8bd;
+text-align: center;
+font-weight: 700;
+}
+
+.story-instruction {
+margin: 25px 0 15px;
+color: #d9b6c5;
+font-size: 13px;
+}
+
+.story-choices {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 9px;
+}
+
+.story-choice {
+min-width: 0;
+padding: 13px 5px;
+border: 1px solid #526c58;
+border-radius: 10px;
+background: #17271d;
+color: #edf0e8;
+font-family: inherit;
+font-size: 12px;
+line-height: 1.5;
+overflow-wrap: anywhere;
+cursor: pointer;
+transition: 0.2s ease;
+}
+
+.story-choice:active {
+transform: scale(0.96);
+}
+
+.story-choice:disabled {
+cursor: default;
+opacity: 0.7;
+}
+
+.story-choice.correct {
+background: #526f59;
+border-color: #a4c3a5;
+color: white;
+}
+
+.story-choice.incorrect {
+border-color: #d8a8bd;
+background: #402b35;
+color: #f1d4df;
+}
+
+.story-feedback {
+min-height: 24px;
+margin: 18px 0;
+color: #e8b8ca;
+font-size: 13px;
+line-height: 1.7;
+}
+
+.story-hint {
+color: #d0d8ce;
+font-size: 13px;
+line-height: 1.8;
+}
+
+.story-reward,
+.story-continuation {
+margin-top: 25px;
+padding: 25px 20px;
+border: 1px solid #d0a2b6;
+border-radius: 15px;
+background: rgba(216, 168, 189, 0.07);
+color: #f2e7ec;
+line-height: 1.9;
+animation: dictionaryReveal 0.6s ease both;
+}
+
+.story-reward h2,
+.story-continuation h2 {
+color: #e8b8ca;
+font-size: 23px;
+line-height: 1.5;
+}
+
+.continuation-text {
+margin-top: 20px;
+text-align: left;
+white-space: pre-line;
+color: #f0eee7;
+font-size: 14px;
+line-height: 2;
+}
+
+.story-container [hidden] {
+display: none !important;
+}
+
+@media (max-width: 360px) {
+.story-choices {
+gap: 5px;
+}
+
+.story-choice {
+    padding: 11px 3px;
+    font-size: 11px;
+}
+
+.story-paper {
+    padding: 19px 16px;
+}
+
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 20px 0;
+    border-top: 1px solid #ffffff20;
+    color: #91a997;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 380px) {
+    header {
+        font-size: 8px;
+    }
+
+    .letter {
+        padding: 23px 18px;
+    }
+
+    footer {
+        font-size: 7px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}
+</style></head><body><div class="ambient one"></div>
+<div class="ambient two"></div><main class="container"><header>
+    <span class="brand">✿</span>
+    <span class="chapter" id="chapter">:)</span>
+</header><!-- SCREEN 1: WELCOME --><section class="screen" id="welcome"><div class="flower">🌷</div>
+
+<p class="eyebrow">A VIPVOPSHIP PROJECT PRESENTS</p>
+
+<h1>
+    The <br>
+    <span>Haharumian</span>
+</h1>
+
+<p class="description">
+    There are a few things hidden here, think you can find them all?
+</p>
+
+<div class="divider">
+    <span></span> ✿ <span></span>
+</div>
+
+<button class="btn" onclick="openLetter()">
+    OFF WE GO
+</button>
+
+
+</section><!-- SCREEN 2: LETTER --><section class="screen hidden" id="letterScreen"><p class="eyebrow">A PSST BEFORE THE 'ACTUAL' PART</p>
+
+<h2>✉</h2>
+
+<article class="letter">
+
+
+    <p class="greeting">Dear Harumi,</p>
+
+    <p>
+        I don't know what made me send this, honestly I don't even know if I'm allowed to send you something like this, it just, I feel like...it could be too much, coming from someone like me, but  then I remember you always deserve all the love in this world, and since I made it with all my love, so here it is...this 'whatever it is'.
+    </p>
+        
+    <p>
+        Um, so it's probably just some kind of mini-game thing (?) that I created to celebrate our third month (??) of vipvopship (???). The kind of game where you need to solve the mystery to unlock some rewards or reveal hidden things...yeah, didn't mean it actually has 'rewards' tho ;)
+    </p>
+
+    <p>
+        This message is your last warning! (I'm dead serious here)
+    </p>
+
+    <p> 
+        I might be enjoying myself too much while creating this, so you might find it a bit cringe later. I don't know how you've seen me so far, but even I myself think that these words ahead aren't like how the actual 'lutwik' would say. It's still lutwik tho, but with another personality you might rarely see. My other side that I can't show you, either out of shame or for my own sanity :)
+    </p>
+  
+    <p>
+       I'm not trying to threaten you here, but if you think you might cringe to death, then you don't need to click the next button ♡ I want you to be as comfortable as you can. If you still choose to continue this game, then good luck ;) 
+    </p>
+ 
+    <p>
+       I made this with pure joy, and so I hope you enjoy it too.
+
+     </p>
+       
+    <p class="signature">
+        — with all my sincerity, lutwik
+    </p>
+
+</article>
+
+<button class="btn" onclick="openClue()">
+    YOU'VE BEEN WARNED!
+</button>
+
+</section><!-- SCREEN 3: FIRST CLUE --><section class="screen hidden" id="clueScreen"><div class="flower">🔎</div>
+
+<p class="eyebrow">MYSTERY 001 · CHAPTER I</p>
+
+<h2>Where It All Began</h2>
+
+<p class="description">
+    Every story has a beginning.
+    Ours began with an anonymous message.
+</p>
+
+<div class="puzzle-card">
+    <div class="puzzle-icon">🌷</div>
+
+    <p>
+        Before we exchanged IDs, before we became
+        the friends we are today, there was a little
+        conversations happened anonymously.
+    </p>
+
+    <p class="question">
+        Do you remember the date when our story
+        first began?
+    </p>
+
+    <p class="note">Hint: A day in August 🌿</p>
+
+    <div class="date-inputs">
+        <input
+            id="dayInput"
+            type="number"
+            placeholder="DD"
+            min="1"
+            max="31"
+        >
+
+        <span>/</span>
+
+        <input
+            id="monthInput"
+            type="number"
+            placeholder="MM"
+            min="1"
+            max="12"
+        >
+    </div>
+
+    <button class="btn" onclick="checkDate()">
+    <span>Unlock this memory</span>
+    <span class="button-arrow">↗</span>
+</button>
+
+<div id="reward" class="reward-card" hidden>
+    <div class="reward-flower">🌷</div>
+
+    <p class="reward-label">A LITTLE NOTE FOR YOU</p>
+
+    <h3>Thank you, Harumi.</h3>
+
+    <p class="reward-message">
+        Thank you for listening to me that day,
+        for responding with such kindness,
+        and for being willing to exchange IDs with me.
+        It might have seemed like a little thing,
+        but it meant more to me than you know. ♡
+    </p>
+
+    <div class="reward-divider">✦ · · · ✦</div>
+
+    <p class="reward-footer">
+    Some beautiful things begin quietly.
+</p>
+
+<button
+    id="nextClueButton"
+    class="garden-button next-clue-button"
+    onclick="goToNextClue()"
+>
+    <span>Continue the journey</span>
+    <span class="button-arrow">→</span>
+</button>
+
+</div>
+
+<p id="feedback" aria-live="polite"></p>
+</div>
+
+<p class="note">
+    one clue at a time, one memory at a time ♡
+</p>
+
+</section><!-- MYSTERY 002: THE LIBRARY -->
+<section id="libraryScreen" class="screen hidden">
+
+    <p class="eyebrow">MYSTERY 002 · CHAPTER II</p>
+
+    <h2>The Library of<br>Unspoken Words</h2>
+
+    <p class="description">
+        Three books rest in silence.<br>
+        Each holds a different secret.
+        One holds words written just for you.
+    </p>
+
+    <p class="library-instruction">
+        Choose a book to discover what's inside.
+    </p>
+
+    <div class="book-shelf">
+
+        <!-- PINK BOOK -->
+        <button class="book-option"
+                onclick="chooseBook('pink', this)"
+                aria-label="Choose the pink book">
+
+            <div class="book pink-book">
+                <div class="book-spine"></div>
+                <div class="book-cover">
+                    <span class="book-symbol">✿</span>
+                    <span class="book-name">THE<br>BLUSH</span>
+                    <span class="book-decoration">✧</span>
+                </div>
+            </div>
+
+            <span class="book-caption">The Blush Book</span>
+        </button>
+
+        <!-- GREEN BOOK -->
+        <button class="book-option"
+                onclick="chooseBook('green', this)"
+                aria-label="Choose the green book">
+
+            <div class="book green-book">
+                <div class="book-spine"></div>
+                <div class="book-cover">
+                    <span class="book-symbol">❧</span>
+                    <span class="book-name">THE<br>BUSH</span>
+                    <span class="book-decoration">✧</span>
+                </div>
+            </div>
+
+            <span class="book-caption">The Bush Book</span>
+        </button>
+
+        <!-- BLUE BOOK -->
+        <button class="book-option"
+                onclick="chooseBook('blue', this)"
+                aria-label="Choose the blue book">
+
+            <div class="book blue-book">
+                <div class="book-spine"></div>
+                <div class="book-cover">
+                    <span class="book-symbol">✦</span>
+                    <span class="book-name">THE<br>BLUEST</span>
+                    <span class="book-decoration">✧</span>
+                </div>
+            </div>
+
+            <span class="book-caption">The Bluest Book</span>
+        </button>
+
+    </div>
+
+    <p id="libraryFeedback"
+       class="library-feedback"
+       aria-live="polite"></p>
+
+    <!-- BUTTERFLY EFFECT -->
+    <div id="butterflyContainer"
+         class="butterfly-container"
+         aria-hidden="true"></div>
+
+    <!-- POEM REWARD -->
+    <div id="poemCard" class="poem-card" hidden>
+
+        <div class="poem-flower">🦋</div>
+
+        <p class="eyebrow">A SECRET, JUST FOR YOU</p>
+
+        <h3>You Found the Right One.</h3>
+
+        <p class="poem-intro">
+            Perhaps some words are easier to write than to say.
+            And perhaps, this is one of the things
+            I've been wanting you to read.
+        </p>
+
+        <div class="poem-divider">✦ · · · ✦</div>
+
+        <!-- ===================================== -->
+        <!-- TEMPEL PUISI LU TEPAT DI BAWAH SINI   -->
+        <!-- GANTI TEKS CONTOH DI BAWAH DENGAN PUISI -->
+        <!-- ===================================== -->
+
+        <div id="poemText" class="poem-text">
+            YOUR POEM GOES HERE
+        </div>
+
+        <!-- ===================================== -->
+        <!-- AKHIR BAGIAN PUISI                    -->
+        <!-- ===================================== -->
+
+        <button class="garden-button"
+                onclick="finishPoem()">
+            <span>Keep this memory</span>
+            <span class="button-arrow">♡</span>
+        </button>
+
+    </div>
+
+    <p class="note">
+        not every secret is meant to stay hidden ♡
+    </p>
+
+</section><!-- MYSTERY 003: THE DICTIONARY OF US --><section id="wordSearchScreen" class="screen hidden"><div class="dictionary-container">
+
+    <p class="chapter-label">MYSTERY 003</p>
+
+    <h1 class="dictionary-title">
+        The Dictionary<br>of Us
+    </h1>
+
+    <p class="dictionary-intro">
+        Some words are hidden, waiting to be found.
+        Find all five words to uncover their meanings.
+    </p>
+
+    <div class="word-list">
+        <span class="word-tag" id="tag-COLORS">COLORS</span>
+        <span class="word-tag" id="tag-CANVAS">CANVAS</span>
+        <span class="word-tag" id="tag-PINK">PINK</span>
+        <span class="word-tag" id="tag-GREEN">GREEN</span>
+        <span class="word-tag" id="tag-YOU">YOU</span>
+    </div>
+
+    <p class="word-search-instruction">
+        Tap the letters in order to spell a hidden word.
+    </p>
+
+    <div id="wordGrid" class="word-grid"></div>
+
+    <button type="button" class="garden-button"
+            onclick="checkSelectedWord()">
+        Check word <span>→</span>
+    </button>
+
+    <button type="button" class="dictionary-reset"
+            onclick="clearSelection()">
+        Clear selection
+    </button>
+
+    <p id="wordFeedback" class="word-feedback"
+       aria-live="polite"></p>
+
+    <div id="dictionaryEntries" class="dictionary-entries"></div>
+
+    <div id="dictionaryEnding" class="dictionary-ending" hidden>
+        <p class="chapter-label">ALL WORDS FOUND</p>
+
+        <h2>Some words are easy to define.</h2>
+
+        <p>
+            Some people aren't.<br>
+            And perhaps, you are one of them.
+        </p>
+
+        <p class="ending-signature">
+            A little memory, just for you. ♡
+        </p>
+
+        <button type="button" class="garden-button"
+                onclick="finishDictionary()">
+            Keep this memory <span>→</span>
+        </button>
+    </div>
+
+</div>
+
+<!-- POP-UP MEANING -->
+<div id="meaningModal" class="meaning-modal"
+     role="dialog" aria-modal="true"
+     aria-labelledby="modalWord" hidden>
+
+    <div class="meaning-card">
+
+        <p class="chapter-label">A WORD DISCOVERED ✨</p>
+
+        <h2 id="modalWord"></h2>
+
+        <p class="part-of-speech">Definition</p>
+
+        <p id="modalDefinition" class="modal-definition"></p>
+
+        <div class="modal-hidden-meaning">
+            <p class="part-of-speech">A meaning of our own ♡</p>
+            <p id="modalHiddenMeaning"></p>
+        </div>
+
+        <button type="button" class="garden-button"
+                onclick="closeMeaningModal()">
+            Keep this meaning <span>→</span>
+        </button>
+
+    </div>
+
+</div>
+
+</section><!-- MYSTERY 004: THE MISSING WORDS --><section id="storyMysteryScreen" class="screen hidden">
+    <div class="story-container">
+        <p class="chapter-label">MYSTERY 004</p>    <h1 class="story-title">The Missing<br>Words</h1>
+
+    <p class="story-intro">
+        Every story has its own words.
+        How many of them do you remember?
+    </p>
+
+    <div id="storyStart">
+        <div class="story-book-icon">📖</div>
+
+        <p class="story-description">
+            A story was once told here.
+            Some words have gone missing.
+            Find them to restore the story.
+        </p>
+
+        <button type="button" class="garden-button"
+            onclick="startStoryMystery()">
+            Restore the Story <span>→</span>
+        </button>
+    </div>
+
+    <div id="storyGame" hidden>
+        <p id="storyProgress" class="story-progress"></p>
+
+        <div class="story-paper">
+            <p id="storyParagraph" class="story-paragraph"></p>
+        </div>
+
+        <p class="story-instruction">
+            Choose the missing word.
+        </p>
+
+        <div id="storyChoices" class="story-choices"></div>
+
+        <p id="storyFeedback" class="story-feedback"
+            aria-live="polite"></p>
+
+        <div id="storyWrongActions" hidden>
+            <p class="story-hint">
+                Perhaps the original story is waiting
+                for you in your chatroom. ♡
+            </p>
+
+            <button type="button" class="garden-button"
+                onclick="retryStoryQuestion()">
+                Try Again <span>↻</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="storyReward" class="story-reward" hidden>
+        <p class="chapter-label">STORY RESTORED ✨</p>
+
+        <h2>Every Word Found Its Way Home.</h2>
+
+        <p>
+            You've found every missing word.
+            But this story was never finished, was it?
+        </p>
+
+        <p>
+            Perhaps there's another page waiting just for you.
+        </p>
+
+        <button type="button" class="garden-button"
+            onclick="openStoryContinuation()">
+            Reveal the Missing Chapter <span>→</span>
+        </button>
+    </div>
+
+    <div id="storyContinuation" class="story-continuation" hidden>
+        <p class="chapter-label">A LITTLE EXTRA CHAPTER</p>
+
+        <h2>To Be Continued...</h2>
+
+        <div id="continuationText" class="continuation-text">Tanpa sadar gua nelen ludah. Bahkan selai ubur ubur fresh best selling terjual 10k picis yg abis gua beli dari sodara Spongebob kayak kalah seger dibanding kalo gua makan si nelayan imut. Pas doi udah berjarak semeteran doang dari gua, gua baru ngeh kalo situasi ini berbahaya cok. Gua mermet, doi orang, ini misalkan gua dipoto terus dipiralin ke tiktok, apa gak abis gua diburu pod caster.Akhirnya karna gak siap pemes, gua pun dgn berat hati bersiap meluncur kembali ke laut dalam dan ninggalin si imut. Baru aja nyelup dikit, doi malah tereak, tentu masih sambil deketin gua, "eh jangan kabur!"
+
+Gua yg udah ancang ancang nyelem pun mau gak mau noleh, "apaanmut?" tanya gua sokab. Eh si imut ternyata juga rada rada sokab coy. Bukannya nanyain makhluk apakah gua sebenarnya, doi malah nunjukin jalanya yg timbul tenggelam, makin jauh dibawa ombak ke tengah laut.
+
+"ambilin itu dong, tolongin acu.."
+
+Beh, apa gak langsung geter dada gua dengernya. Si imut meminta tolongkan pada gua, bisa apa selain gua nurutkan? Jangankan jala, seluruh isi lautan juga gua kasih kalo doi yg minta. Entah pake susuk pemikat apa ini orang, dgn gampangnya meluluhkan gua yg biasanya kebal.
+
+Tanpa pikir panjang akhirnya gua kejar itu jala. Dgn kecepatan setara speedboat, gua berenang ke tengah laut, lalu balik lagi ke arah doi yg clingak clinguk nungguin gua. Tapi karna gua gak mau dia lihat ekor hejo gua yg makin terang karna eksaitid, gua menahan diri untuk terlalu minggir ke pantai. Dgn separuh badan masih di aer, gua lambai lambaikanlah jala yg udah di tangan.
+
+"ini gua lempar yak?" tanya gua. Untung si imut kagak congek, dia ngangguk sambil acungin jempolnya yg imut juga. Ini manusia dari ujung rambut ampe jari kaki imut semua dah, kata gua. Gua yg gak bisa tahan buat senyum keimutan, ngebatin tipis dalam hati, when yah gua punya kaki, biar bisa ngejar doi.
+
+Setelah gua melempar itu jala ke deket si nelayan (untung kagak kena timpuk), dan ngejempolin ucapan terimakasihnya yg gak kalah imut, gua pun yg semakin sadar atas perbedaan kami akhirnya bersiap sapamit. Kan gak lucu kalo hasrat ngegondol manusia gua menang dan bikin gua jadi kriminal laut dalam.
+
+Tapi sebelum pamit, gua memberanikan diri buat sokab lagi, nanyain dgn lantang, "lu siapa namanya?"
+
+Si imut yg sekarang udah nenteng jalanya, (kayaknya siap siap mau balik ngais ikan) senyum manis pas ngejawab, "harumiiiii, kamu siapa, met?"
+
+Entah itu maksudnya mermet apa jamet, gua yg kesenangan berasa dapet pet name, menjawab salting, "adalah pokoknya."
+
+Lalu saat gua pikir pertemuan ini tlah akan usai dan kami memang ditakdirkan hanya bisa saling ber good bye, eh doi malah ngeluarin hp nya dari kantong. Ngeri mau dipoto, gua agak nyelem dikit ke aer, tapi ternyata kagak dipoto gua coy. Doi abis pencet pencet hp nya malah nanya, yg jadi akhir pertemuan kami di siang yg hareudang itu...
+
+"main tele gak kamuu?"
+
+Meski agak kebingungan, gua ngangguk aja. Jaman sekarang sapa yg kagak main tu apk, kan. Eh abis itu si imut nanya lagi, yg jadi akhir pertemuan kami di siang yg hareudang itu...
+
+"usn kamu apa, adalah pokoknya?"
+
+</div>
+
+        <p class="ending-signature">
+            D.I.E.N.G 
+        </p>
+    </div>
+</div>
+
+</section>
+  
+  <footer>
+    <span>PART OF HAHARUMIAN </span>
+    <span>✿</span>
+    <span>HAPPY NOVEMBER</span>
+    
+</footer></main><script>
+function showScreen(target) {
+    const screens = [
+        "welcome",
+        "letterScreen",
+        "clueScreen",
+        "libraryScreen",
+        "wordSearchScreen"
+    ];
+
+    screens.forEach(function(id) {
+        const screen = document.getElementById(id);
+        if (screen) {
+            screen.classList.add("hidden");
+        }
+    });
+
+    const targetScreen = document.getElementById(target);
+
+    if (targetScreen) {
+        targetScreen.classList.remove("hidden");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+}
+function openLetter() {
+    document.getElementById("chapter").textContent = "CHAPTER 02";
+    showScreen("letterScreen");
+}
+
+function openClue() {
+    document.getElementById("chapter").textContent = "CHAPTER 03";
+    showScreen("clueScreen");
+}
+  function checkDate() {
+    const day = document.getElementById("dayInput").value;
+    const month = document.getElementById("monthInput").value;
+    const feedback = document.getElementById("feedback");
+    const reward = document.getElementById("reward");
+
+    if (Number(day) === 9 && Number(month) === 8) {
+        feedback.textContent = "✦ A memory unlocked ✦";
+        reward.hidden = false;
+
+        reward.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest"
+        });
+    } else {
+        reward.hidden = true;
+
+        feedback.textContent =
+            "Not quite, little detective. Take another look at our memories. 🌿";
+    }
+}
+
+
+function goToNextClue() {
+showScreen("libraryScreen");
+}
+/* ===== CHOOSE A BOOK ===== */
+
+let bookChosen = false;
+
+function chooseBook(color, button) {
+    if (bookChosen) return;
+
+    const feedback = document.getElementById("libraryFeedback");
+    const butterflies = document.getElementById("butterflyContainer");
+    const poemCard = document.getElementById("poemCard");
+
+    if (color === "blue") {
+        bookChosen = true;
+
+        feedback.textContent = "✦ You found the blue one. ✦";
+
+        document.querySelectorAll(".book-option").forEach(book => {
+            book.disabled = true;
+        });
+
+        button.querySelector(".book").style.boxShadow =
+            "0 0 25px rgba(140, 187, 232, 0.75)";
+
+        createButterflies("🦋", 8);
+
+        setTimeout(() => {
+            poemCard.hidden = false;
+
+            poemCard.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+        }, 900);
+
+    } else {
+        feedback.textContent =
+            "Not this one, little detective. Some secrets are still waiting for you. 🌿";
+
+        button.querySelector(".book").style.transform =
+            "rotate(-7deg)";
+
+        createButterflies("🦋", 5, color);
+
+        setTimeout(() => {
+            button.querySelector(".book").style.transform = "";
+        }, 450);
+    }
+}
+
+/* ===== BUTTERFLY ANIMATION ===== */
+
+function createButterflies(symbol, amount, color = "blue") {
+    const container = document.getElementById("butterflyContainer");
+
+    const colors = {
+        pink: "#efa9bb",
+        green: "#a8c5a0",
+        blue: "#8cbbe8"
+    };
+
+    for (let i = 0; i < amount; i++) {
+        const butterfly = document.createElement("span");
+
+        butterfly.className = "butterfly";
+        butterfly.textContent = symbol;
+
+        butterfly.style.left = (20 + Math.random() * 60) + "%";
+        butterfly.style.top = (40 + Math.random() * 30) + "%";
+        butterfly.style.setProperty(
+            "--fly-x",
+            (Math.random() * 140 - 70) + "px"
+        );
+
+        butterfly.style.color = colors[color] || colors.blue;
+        butterfly.style.animationDelay = (Math.random() * 0.35) + "s";
+
+        container.appendChild(butterfly);
+
+        setTimeout(() => {
+            butterfly.remove();
+        }, 2500);
+    }
+}
+
+/* ===== FINISH READING THE POEM ===== */
+
+function finishPoem() {
+showScreen("wordSearchScreen");
+}
+  /* ==========================================
+MYSTERY 003: THE DICTIONARY OF US
+========================================== */
+
+const dictionaryWords = {
+COLORS: {
+meaning: "The things that make the world less ordinary.",
+hidden: "Some colors remind me of you, while others remind me of myself. Somehow, they look better together."
+},
+
+CANVAS: {
+    meaning: "A surface on which something is created.",
+    hidden: "Maybe every memory is a little stroke of color, and the people we meet become part of the picture."
+},
+
+PINK: {
+    meaning: "A color often associated with roses, softness, and warmth.",
+    hidden: "A little reminder of someone who makes ordinary things feel softer."
+},
+
+GREEN: {
+    meaning: "The color of leaves, growth, and new beginnings.",
+    hidden: "A reminder that some things grow quietly, even when nobody notices."
+},
+
+YOU: {
+    meaning: "The pronoun used to address the person being spoken to.",
+    hidden: "In this dictionary, you means someone who became part of a story without knowing how important their chapter would be."
+}
+
+};
+
+/* ===== PUZZLE CONFIGURATION ===== */
+
+// Word positions: horizontal, vertical, and diagonal.
+// The remaining cells are filled with random letters.
+
+const dictionaryPlacements = [
+{ word: "COLORS", row: 0, col: 0, dr: 0, dc: 1 },
+{ word: "CANVAS", row: 1, col: 0, dr: 1, dc: 0 },
+{ word: "PINK",   row: 1, col: 2, dr: 1, dc: 1 },
+{ word: "GREEN",  row: 2, col: 8, dr: 1, dc: 0 },
+{ word: "YOU",    row: 7, col: 2, dr: 1, dc: 1 }
+];
+
+const dictionarySize = 10;
+
+let dictionaryLayout = [];
+let dictionarySelection = [];
+let dictionaryFound = new Set();
+let dictionaryFoundCells = new Set();
+
+/* ===== CREATE THE PUZZLE ===== */
+
+function startWordSearch() {
+const grid = document.getElementById("wordGrid");
+
+if (!grid || grid.dataset.ready === "yes") return;
+
+grid.dataset.ready = "yes";
+
+// Create an empty 10 x 10 grid.
+dictionaryLayout = Array.from(
+    { length: dictionarySize },
+    () => Array(dictionarySize).fill("")
+);
+
+// Place the five hidden words.
+dictionaryPlacements.forEach(function (placement) {
+    for (let i = 0; i < placement.word.length; i++) {
+        const row = placement.row + placement.dr * i;
+        const col = placement.col + placement.dc * i;
+
+        dictionaryLayout[row][col] = placement.word[i];
+    }
+});
+
+// Fill empty cells with random letters.
+const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+for (let row = 0; row < dictionarySize; row++) {
+    for (let col = 0; col < dictionarySize; col++) {
+        if (!dictionaryLayout[row][col]) {
+            dictionaryLayout[row][col] =
+                alphabet[Math.floor(Math.random() * alphabet.length)];
+        }
+    }
+}
+
+// Render the letter buttons.
+grid.innerHTML = "";
+
+dictionaryLayout.forEach(function (row, r) {
+    row.forEach(function (letter, c) {
+        const button = document.createElement("button");
+
+        button.type = "button";
+        button.className = "letter-cell";
+        button.textContent = letter;
+        button.dataset.index = r * dictionarySize + c;
+        button.setAttribute("aria-label", letter);
+        button.setAttribute("aria-pressed", "false");
+
+        button.addEventListener("click", function () {
+            selectDictionaryLetter(button);
+        });
+
+        grid.appendChild(button);
+    });
+});
+
+}
+
+/* ===== SELECT LETTERS IN A STRAIGHT LINE ===== */
+
+function selectDictionaryLetter(button) {
+if (
+button.classList.contains("word-found") ||
+button.classList.contains("selected")
+) {
+return;
+}
+
+const index = Number(button.dataset.index);
+const row = Math.floor(index / dictionarySize);
+const col = index % dictionarySize;
+
+if (dictionarySelection.length >= 1) {
+    const firstIndex = dictionarySelection[0];
+    const firstRow = Math.floor(firstIndex / dictionarySize);
+    const firstCol = firstIndex % dictionarySize;
+
+    const dr = row - firstRow;
+    const dc = col - firstCol;
+
+    // Huruf kedua harus berada di sebelah huruf pertama.
+    if (dictionarySelection.length === 1) {
+        if (
+            Math.abs(dr) > 1 ||
+            Math.abs(dc) > 1 ||
+            (dr === 0 && dc === 0)
+        ) {
+            showWordFeedback(
+                "Choose a neighboring letter, horizontally, vertically, or diagonally. ♡"
+            );
+            return;
+        }
+    } else {
+        // Tentukan arah berdasarkan dua huruf pertama.
+        const secondIndex = dictionarySelection[1];
+        const secondRow = Math.floor(secondIndex / dictionarySize);
+        const secondCol = secondIndex % dictionarySize;
+
+        const stepRow = secondRow - firstRow;
+        const stepCol = secondCol - firstCol;
+
+        const previousIndex =
+            dictionarySelection[dictionarySelection.length - 1];
+        const previousRow = Math.floor(previousIndex / dictionarySize);
+        const previousCol = previousIndex % dictionarySize;
+
+        // Pastikan huruf selanjutnya mengikuti arah yang sama.
+        if (
+            row !== previousRow + stepRow ||
+            col !== previousCol + stepCol
+        ) {
+            showWordFeedback(
+                "Keep following the same direction to complete the word. 🌿"
+            );
+            return;
+        }
+    }
+}
+
+dictionarySelection.push(index);
+button.classList.add("selected");
+button.setAttribute("aria-pressed", "true");
+
+showWordFeedback(dictionarySelection.length + " letters selected.");
+
+}
+
+/* ===== CLEAR SELECTION ===== */
+
+function clearSelection() {
+dictionarySelection.forEach(function (index) {
+const cell = getDictionaryCell(index);
+
+    if (cell && !cell.classList.contains("word-found")) {
+        cell.classList.remove("selected");
+        cell.setAttribute("aria-pressed", "false");
+    }
+});
+
+dictionarySelection = [];
+showWordFeedback("");
+
+}
+
+/* ===== CHECK THE SELECTED WORD ===== */
+
+function checkSelectedWord() {
+if (dictionarySelection.length === 0) {
+showWordFeedback(
+"Choose the letters of a hidden word first. 🌿"
+);
+return;
+}
+
+const selectedWord = dictionarySelection.map(function (index) {
+    return dictionaryLayout[
+        Math.floor(index / dictionarySize)
+    ][index % dictionarySize];
+}).join("");
+
+const matchedWord = dictionaryWords[selectedWord]
+    ? selectedWord
+    : null;
+
+if (!matchedWord) {
+    showWordFeedback(
+        "Not quite! Try another path through the letters. ♡"
+    );
+
+    clearSelection();
+    return;
+}
+
+if (dictionaryFound.has(matchedWord)) {
+    showWordFeedback(
+        "You've already found that word! 🌷"
+    );
+
+    clearSelection();
+    return;
+}
+
+// Save the discovered word.
+dictionaryFound.add(matchedWord);
+
+const foundIndices = [...dictionarySelection];
+
+foundIndices.forEach(function (index) {
+    const cell = getDictionaryCell(index);
+
+    if (cell) {
+        cell.classList.remove("selected");
+        cell.classList.add("word-found");
+        cell.setAttribute("aria-pressed", "true");
+    }
+
+    dictionaryFoundCells.add(index);
+});
+
+// Mark the word as found in the word list.
+const tag = document.getElementById("tag-" + matchedWord);
+
+if (tag) {
+    tag.classList.add("found");
+}
+
+// Keep a permanent entry on the page.
+const entry = createDictionaryEntry(matchedWord);
+
+document.getElementById("dictionaryEntries").appendChild(entry);
+
+dictionarySelection = [];
+
+showWordFeedback("");
+
+// Open the meaning popup immediately.
+openMeaningModal(matchedWord);
+
+// Reveal the ending when all five words are found.
+if (
+    dictionaryFound.size ===
+    Object.keys(dictionaryWords).length
+) {
+    const ending = document.getElementById("dictionaryEnding");
+
+    if (ending) {
+        ending.hidden = false;
+    }
+}
+
+}
+
+/* ===== FIND A GRID CELL ===== */
+
+function getDictionaryCell(index) {
+return document.querySelector(
+'.letter-cell[data-index="' + index + '"]'
+);
+}
+
+/* ===== SHOW FEEDBACK ===== */
+
+function showWordFeedback(message) {
+const feedback = document.getElementById("wordFeedback");
+
+if (feedback) {
+    feedback.textContent = message;
+}
+
+}
+
+/* ===== CREATE THE SAVED MEANING ===== */
+
+function createDictionaryEntry(word) {
+const data = dictionaryWords[word];
+
+const entry = document.createElement("article");
+entry.className = "dictionary-entry";
+entry.id = "entry-" + word;
+
+const heading = document.createElement("h3");
+heading.textContent = word;
+
+const partOfSpeech = document.createElement("span");
+partOfSpeech.className = "part-of-speech";
+partOfSpeech.textContent = "dictionary entry · a little memory";
+
+const definition = document.createElement("p");
+definition.className = "definition";
+definition.textContent = "Definition: " + data.meaning;
+
+const hiddenMeaning = document.createElement("p");
+hiddenMeaning.className = "hidden-meaning";
+hiddenMeaning.textContent = "A meaning of our own: " + data.hidden;
+
+entry.appendChild(heading);
+entry.appendChild(partOfSpeech);
+entry.appendChild(definition);
+entry.appendChild(hiddenMeaning);
+
+return entry;
+
+}
+
+/* ===== OPEN THE MEANING POPUP ===== */
+
+function openMeaningModal(word) {
+const data = dictionaryWords[word];
+
+const modal = document.getElementById("meaningModal");
+
+if (!modal || !data) return;
+
+document.getElementById("modalWord").textContent = word;
+
+document.getElementById("modalDefinition").textContent =
+    data.meaning;
+
+document.getElementById("modalHiddenMeaning").textContent =
+    data.hidden;
+
+modal.dataset.currentWord = word;
+modal.hidden = false;
+
+document.body.style.overflow = "hidden";
+
+const closeButton = modal.querySelector("button");
+
+if (closeButton) {
+    closeButton.focus();
+}
+
+}
+
+/* ===== CLOSE THE MEANING POPUP ===== */
+
+function closeMeaningModal() {
+const modal = document.getElementById("meaningModal");
+
+if (!modal) return;
+
+const word = modal.dataset.currentWord;
+
+modal.hidden = true;
+
+document.body.style.overflow = "";
+
+// Scroll to the saved meaning after closing the popup.
+const entry = document.getElementById("entry-" + word);
+
+if (entry) {
+    setTimeout(function () {
+        entry.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+    }, 150);
+}
+
+// Show the ending after the last popup is closed.
+if (
+    dictionaryFound.size ===
+    Object.keys(dictionaryWords).length
+) {
+    const ending = document.getElementById("dictionaryEnding");
+
+    if (ending) {
+        setTimeout(function () {
+            ending.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+        }, 700);
+    }
+}
+
+}
+
+/* ===== FINISH THE DICTIONARY ===== */
+
+function finishDictionary() {
+    showScreen("storyMysteryScreen");
+}
+
+// Build the grid when the page loads.
+startWordSearch();
+  const missingWordQuestions = [
+{
+paragraph: 'Pada suatu hari yg panas, seekor gua menepi di pantai. Gua adalah mermet hejo yg tampan. Lalu saat sedang asik menikmati selai ubur-ubur, seorang nelayan baju merah kembang kembang datang dengan jala imutnya, sangat pede mengais ikan.',
+blank: 'ubur-ubur',
+before: 'Lalu saat sedang asik menikmati selai ',
+after: ', seorang nelayan baju merah kembang kembang datang dengan jala imutnya, sangat pede mengais ikan.',
+choices: ['ikan', 'ubur-ubur', 'kerang'],
+answer: 'ubur-ubur'
+},
+{
+before: 'Gua melihat itu hanya bisa nahan ',
+after: ', apalagi gaya si nelayan saat ngais ikan itu agak aneh.',
+choices: ['ngantuk', 'nangis', 'ngakak'],
+answer: 'ngakak'
+},
+{
+before: 'Sambil geal geolin pantat semoknya, dia sok cantik memasuk keluarkan jalanya ke laut yang ',
+after: '. Mana dapet egek, kata gua dalam hati.',
+choices: ['dangkal', 'dalam', 'keruh'],
+answer: 'dangkal'
+},
+{
+before: 'Cukup lama si nelayan semok begitu, sampe gak lama kemudian jalanya kebawa ',
+after: ', entah karna tangannya yg geter kecapean atau emang ombak yg terlalu kuat hantam doi.',
+choices: ['ikan', 'ombak', 'angin'],
+answer: 'ombak'
+},
+{
+before: 'Meski kaget dan kayak agak takut, si nelayan semok anehnya ',
+after: ' deketin gua.',
+choices: ['kabur', 'malah', 'gak jadi'],
+answer: 'malah'
+},
+{
+before: 'Tone kulitnya sendiri putih ke ',
+after: ' mpink mpink an, sehat terhidrasi meski lumayan lama di bawah matahari.',
+choices: ['ijo', 'biru', 'mpink'],
+answer: 'mpink'
+}
+];
+
+let currentStoryQuestion = 0;
+let storyAnswerLocked = false;
+
+function startStoryMystery() {
+currentStoryQuestion = 0;
+storyAnswerLocked = false;
+
+document.getElementById('storyStart').hidden = true;
+document.getElementById('storyReward').hidden = true;
+document.getElementById('storyContinuation').hidden = true;
+document.getElementById('storyGame').hidden = false;
+
+renderStoryQuestion();
+
+}
+
+function renderStoryQuestion() {
+const question = missingWordQuestions[currentStoryQuestion];
+
+if (!question) {
+    finishStoryMystery();
+    return;
+}
+
+storyAnswerLocked = false;
+
+document.getElementById('storyProgress').textContent =
+    'MISSING WORD ' + (currentStoryQuestion + 1) +
+    ' / ' + missingWordQuestions.length;
+
+const paragraph = document.getElementById('storyParagraph');
+
+paragraph.innerHTML = '';
+
+paragraph.appendChild(
+    document.createTextNode(question.before)
+);
+
+const blank = document.createElement('span');
+blank.className = 'story-blank';
+blank.textContent = '______';
+paragraph.appendChild(blank);
+
+paragraph.appendChild(
+    document.createTextNode(question.after)
+);
+
+const choicesContainer = document.getElementById('storyChoices');
+choicesContainer.innerHTML = '';
+
+const shuffledChoices = [...question.choices].sort(
+    () => Math.random() - 0.5
+);
+
+shuffledChoices.forEach(function(choice) {
+    const button = document.createElement('button');
+
+    button.type = 'button';
+    button.className = 'story-choice';
+    button.textContent = choice;
+
+    button.addEventListener('click', function() {
+        checkStoryAnswer(choice, button);
+    });
+
+    choicesContainer.appendChild(button);
+});
+
+document.getElementById('storyFeedback').textContent = '';
+document.getElementById('storyWrongActions').hidden = true;
+
+}
+
+function checkStoryAnswer(choice, button) {
+if (storyAnswerLocked) return;
+
+const question = missingWordQuestions[currentStoryQuestion];
+const feedback = document.getElementById('storyFeedback');
+
+if (choice === question.answer) {
+    storyAnswerLocked = true;
+
+    button.classList.add('correct');
+
+    document.querySelectorAll('.story-choice').forEach(function(item) {
+        item.disabled = true;
+    });
+
+    document.querySelector('.story-blank').textContent = question.answer;
+
+    feedback.textContent = 'Correct! The story remembers you. ♡';
+
+    setTimeout(function() {
+        currentStoryQuestion++;
+
+        if (currentStoryQuestion >= missingWordQuestions.length) {
+            finishStoryMystery();
+        } else {
+            renderStoryQuestion();
+        }
+    }, 1000);
+
+} else {
+    button.classList.add('incorrect');
+    feedback.textContent =
+        'Oops! That word doesn’t belong here. Try reading the original story again. ♡';
+
+    document.getElementById('storyWrongActions').hidden = false;
+}
+
+}
+
+function retryStoryQuestion() {
+renderStoryQuestion();
+}
+
+function finishStoryMystery() {
+document.getElementById('storyGame').hidden = true;
+document.getElementById('storyReward').hidden = false;
+document.getElementById('storyContinuation').hidden = true;
+
+document.getElementById('storyReward').scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+});
+
+}
+
+function openStoryContinuation() {
+document.getElementById('storyReward').hidden = true;
+document.getElementById('storyContinuation').hidden = false;
+
+document.getElementById('storyContinuation').scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+});
+
+}
+</script></body>
+</html>
