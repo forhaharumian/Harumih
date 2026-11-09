@@ -1259,6 +1259,10 @@ footer {
         transition-duration: .01ms !important;
     }
 }
+  
+/* =========================
+   THE ARCHIVE
+========================= */
 
 .archive-container {
     width: 100%;
@@ -1364,6 +1368,9 @@ footer {
     letter-spacing: 2px;
     color: #c9a9b6;
 }
+
+/* CHAPTER VIEW */
+
 .archive-back {
     display: block;
     margin: 0 0 30px;
@@ -1458,6 +1465,7 @@ footer {
     letter-spacing: 2px;
     font-style: italic;
   }
+
 </style></head><body><div class="ambient one"></div>
 <div class="ambient two"></div><main class="container"><header>
     <span class="brand">୨ৎ</span>
@@ -1944,7 +1952,278 @@ Meski agak kebingungan, gua ngangguk aja. Jaman sekarang sapa yang kagak main tu
         I know you're probably tired of this by now, maybe even sick of it. All the puzzles, all the reading, all the cheesy nonsense...you might be cringing so hard you wanna close this thing already, and honestly, I wouldn't blame you (I'd probably do the same, too)<br><br>
         If you wanna stop here, that's fine. Buuut...just know that you'll have to redo all those mysteries to get back here again. So might as well finish what you started, right, my love? (evil laugh)<br><br>
         </p>
-* ===== BUTTERFLY ANIMATION ===== */
+
+
+        <button class="garden-button" onclick="openArchive()">
+            (─ ‿ ─)
+        </button>
+
+    </div>
+
+
+</section>
+<!-- THE ARCHIVE -->
+<section id="archiveScreen" class="screen hidden">
+
+    <div class="archive-container">
+
+        <p class="chapter-label"></p>
+
+        <h2 class="archive-title">100 Reasons Why</h2>
+
+        <p class="description">
+            A list you once asked me for. Because better late than never, people cum and laude, to speak is to new life, and we only live once.
+        </p>
+
+        <div class="archive-divider">· · ─ · 🪷· ─ · ·</div>
+
+        <div class="archive-folders">
+
+            <button class="archive-folder folder-pink"
+                    onclick="openArchiveChapter(1)">
+                <span class="folder-number">COLLECTION 01</span>
+                <span class="folder-name">The 25 Reasons</span>
+                <span class="folder-range">001 — 025</span>
+                <span class="folder-description">
+                    Why I Love You
+                </span>
+            </button>
+
+            <button class="archive-folder folder-green"
+                    onclick="openArchiveChapter(2)">
+                <span class="folder-number">COLLECTION 02</span>
+                <span class="folder-name">The 25+25 Reasons</span>
+                <span class="folder-range">026 — 050</span>
+                <span class="folder-description">
+                    私があなたを愛する理由
+                </span>
+            </button>
+
+            <button class="archive-folder folder-blue"
+                    onclick="openArchiveChapter(3)">
+                <span class="folder-number">COLLECTION 03</span>
+                <span class="folder-name">The 50+25 Reasons</span>
+                <span class="folder-range">051 — 075</span>
+                <span class="folder-description">
+                    내가 너를 사랑하는 이유
+                </span>
+            </button>
+
+            <button class="archive-folder folder-cream"
+                    onclick="openArchiveChapter(4)">
+                <span class="folder-number">COLLECTION 04</span>
+                <span class="folder-name">The 75+25 Reasons</span>
+                <span class="folder-range">076 — 100</span>
+                <span class="folder-description">
+                    Nu Ku Urang Dipikabogoh Ti Maneh
+                </span>
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ARCHIVE CHAPTER VIEW -->
+<section id="archiveChapterScreen" class="screen hidden">
+
+    <div class="archive-container">
+
+        <button class="archive-back"
+                onclick="backToArchive()">
+            ← Back to Archive
+        </button>
+
+        <p id="archiveChapterNumber" class="chapter-label">
+            COLLECTION 01
+        </p>
+
+        <h2 id="archiveChapterTitle" class="archive-title">Why
+            
+        </h2>
+
+        <p id="archiveChapterIntro" class="archive-intro">I Love You
+          
+        </p>
+
+        <div class="archive-divider">· · ─ · 🪷· ─ · ·</div>
+
+        <div id="archiveReasons" class="archive-reasons">
+            <!-- Reasons will appear here -->
+        </div>
+
+        <button class="garden-button archive-next"
+                onclick="nextArchiveChapter()">
+            Next Collection →
+        </button>
+
+    </div>
+
+</section><!-- ARCHIVE ENDING -->
+<section id="archiveEnding" class="archive-ending" hidden>
+
+    <p class="eyebrow">THE END OF THE PROJECT</p>
+
+    <h2>And That's All...</h2>
+
+    <div class="reward-message">
+        <p>
+            ......a hundred little reasons, finally making their way to the end of this project.
+        </p>
+
+        <p>
+            I could probably come up with another slide and another hundred reasons more, but let's not make you read all that. I have some mercy, unfortunately (akus Harumi, akus myself)
+        </p>
+
+        <p>
+            Anyway, this is where the 'this is' ends. I hope you enjoyed going through it as much as I enjoyed putting it together.
+        </p>
+
+        <p>
+            There wasn't really a grand reason behind making all of this. Besides wanting to celebrate our vipvopship day, I also had a lot of things I wanted to tell you. And apparently, this moment seemed like a pretty good opportunity to do so, like I said at the beginning, I wasn't really 'brave' enough to show Harumi this side of me before, so... here we are, I guess, wkwk (malumi)
+        </p>
+
+        <p>
+            The whole point of this project is actually pretty simple, mi. It's just me saying thank you and, yeah...ily.
+        </p><p>
+          I love you, Harumi. My friend, my vipvop, my sk-sk-harumi.
+          
+        </p><p>Thank you for being here, for being you, and for giving me so many little things worth writing about.
+        </p><p>
+          After this, please don't go around thinking this was too much or too, too whatever else! Nothing is ever too much when it comes to you. Every bit of effort is worth it for someone like you.
+        </p><p>
+          I genuinely enjoyed making this (even though I got a tiny bit lost towards the end). I enjoyed it so much, mi. I really, really did. So please, don't overthink it, okay? You don't have to feel any particular way about all of this. Just enjoy it, take it as it is, and don't feel like you owe me anything for it. I just wanted to make something for you, and I'm happy I got to do that.
+    
+        </p><p>
+          Congratulations on making it all the way to the end (manusiamanusiakuat ketuanyaharumi) Happy vipvop day, happy monday, and happy cringing :1
+        </p>
+    </div>
+
+    <p class="ending-signature">⚂</p>
+  
+
+</section>
+
+  
+  <footer>
+    <span>HARUMI  </span>
+    <span></span>
+    <span>CELESTIA</span>
+    
+</footer></main><script>
+function showScreen(target) {
+    const screens = [
+        "welcome",
+        "letterScreen",
+        "clueScreen",
+        "libraryScreen",
+        "wordSearchScreen"
+    ];
+
+    screens.forEach(function(id) {
+        const screen = document.getElementById(id);
+        if (screen) {
+            screen.classList.add("hidden");
+        }
+    });
+
+    const targetScreen = document.getElementById(target);
+
+    if (targetScreen) {
+        targetScreen.classList.remove("hidden");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+}
+function openLetter() {
+    document.getElementById("chapter").textContent = "୨ৎ";
+    showScreen("letterScreen");
+}
+
+function openClue() {
+    document.getElementById("chapter").textContent = "୨ৎ";
+    showScreen("clueScreen");
+}
+  function checkDate() {
+    const day = document.getElementById("dayInput").value;
+    const month = document.getElementById("monthInput").value;
+    const feedback = document.getElementById("feedback");
+    const reward = document.getElementById("reward");
+
+    if (Number(day) === 9 && Number(month) === 8) {
+        feedback.textContent = "";
+        reward.hidden = false;
+
+        reward.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest"
+        });
+    } else {
+        reward.hidden = true;
+
+        feedback.textContent ="You better be serious... :/";
+    }
+}
+
+
+function goToNextClue() {
+showScreen("libraryScreen");
+}
+/* ===== CHOOSE A BOOK ===== */
+
+let bookChosen = false;
+
+function chooseBook(color, button) {
+    if (bookChosen) return;
+
+    const feedback = document.getElementById("libraryFeedback");
+    const butterflies = document.getElementById("butterflyContainer");
+    const poemCard = document.getElementById("poemCard");
+const poemNoteCard = document.getElementById("poemNoteCard");
+  const finishPoemButton = document.getElementById("finishPoemButton");
+
+    if (color === "blue") {
+        bookChosen = true;
+
+        feedback.textContent = "᠃ ⚘᠂ ⚘ Gotcha ⚘ ᠂ ⚘ ᠃";
+
+        document.querySelectorAll(".book-option").forEach(book => {
+            book.disabled = true;
+        });
+
+        button.querySelector(".book").style.boxShadow =
+            "0 0 25px rgba(140, 187, 232, 0.75)";
+
+        createButterflies("🦋", 8);
+
+        setTimeout(() => {
+    poemCard.hidden = false;
+poemNoteCard.hidden = false;
+finishPoemButton.hidden = false;
+
+    poemCard.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+}, 900);
+
+    } else {
+        feedback.textContent =
+            "Not this one, my love. Some secrets are still waiting for you.";
+
+        button.querySelector(".book").style.transform =
+            "rotate(-7deg)";
+
+        createButterflies("🦋", 5, color);
+
+        setTimeout(() => {
+            button.querySelector(".book").style.transform = "";
+        }, 450);
+    }
+}
+
+/* ===== BUTTERFLY ANIMATION ===== */
 
 function createButterflies(symbol, amount, color = "blue") {
     const container = document.getElementById("butterflyContainer");
@@ -2016,7 +2295,105 @@ YOU: {
 
 };
 
-const firstCol = firstIndex % dictionarySize;
+/* ===== PUZZLE CONFIGURATION ===== */
+
+// Word positions: horizontal, vertical, and diagonal.
+// The remaining cells are filled with random letters.
+
+const dictionaryPlacements = [
+{ word: "COLORS", row: 0, col: 0, dr: 0, dc: 1 },
+{ word: "CANVAS", row: 1, col: 0, dr: 1, dc: 0 },
+{ word: "PINK",   row: 1, col: 2, dr: 1, dc: 1 },
+{ word: "GREEN",  row: 2, col: 8, dr: 1, dc: 0 },
+{ word: "YOU",    row: 7, col: 2, dr: 1, dc: 1 }
+];
+
+const dictionarySize = 10;
+
+let dictionaryLayout = [];
+let dictionarySelection = [];
+let dictionaryFound = new Set();
+let dictionaryFoundCells = new Set();
+
+/* ===== CREATE THE PUZZLE ===== */
+
+function startWordSearch() {
+const grid = document.getElementById("wordGrid");
+
+if (!grid || grid.dataset.ready === "yes") return;
+
+grid.dataset.ready = "yes";
+
+// Create an empty 10 x 10 grid.
+dictionaryLayout = Array.from(
+    { length: dictionarySize },
+    () => Array(dictionarySize).fill("")
+);
+
+// Place the five hidden words.
+dictionaryPlacements.forEach(function (placement) {
+    for (let i = 0; i < placement.word.length; i++) {
+        const row = placement.row + placement.dr * i;
+        const col = placement.col + placement.dc * i;
+
+        dictionaryLayout[row][col] = placement.word[i];
+    }
+});
+
+// Fill empty cells with random letters.
+const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+for (let row = 0; row < dictionarySize; row++) {
+    for (let col = 0; col < dictionarySize; col++) {
+        if (!dictionaryLayout[row][col]) {
+            dictionaryLayout[row][col] =
+                alphabet[Math.floor(Math.random() * alphabet.length)];
+        }
+    }
+}
+
+// Render the letter buttons.
+grid.innerHTML = "";
+
+dictionaryLayout.forEach(function (row, r) {
+    row.forEach(function (letter, c) {
+        const button = document.createElement("button");
+
+        button.type = "button";
+        button.className = "letter-cell";
+        button.textContent = letter;
+        button.dataset.index = r * dictionarySize + c;
+        button.setAttribute("aria-label", letter);
+        button.setAttribute("aria-pressed", "false");
+
+        button.addEventListener("click", function () {
+            selectDictionaryLetter(button);
+        });
+
+        grid.appendChild(button);
+    });
+});
+
+}
+
+/* ===== SELECT LETTERS IN A STRAIGHT LINE ===== */
+
+function selectDictionaryLetter(button) {
+if (
+button.classList.contains("word-found") ||
+button.classList.contains("selected")
+) {
+return;
+}
+
+const index = Number(button.dataset.index);
+const row = Math.floor(index / dictionarySize);
+const col = index % dictionarySize;
+
+if (dictionarySelection.length >= 1) {
+    const firstIndex = dictionarySelection[0];
+    const firstRow = Math.floor(firstIndex / dictionarySize);
+    const firstCol = firstIndex % dictionarySize;
 
     const dr = row - firstRow;
     const dc = col - firstCol;
@@ -2034,7 +2411,8 @@ const firstCol = firstIndex % dictionarySize;
             return;
         }
     } else {
-const secondIndex = dictionarySelection[1];
+        // Tentukan arah berdasarkan dua huruf pertama.
+        const secondIndex = dictionarySelection[1];
         const secondRow = Math.floor(secondIndex / dictionarySize);
         const secondCol = secondIndex % dictionarySize;
 
@@ -2099,6 +2477,7 @@ const selectedWord = dictionarySelection.map(function (index) {
         Math.floor(index / dictionarySize)
     ][index % dictionarySize];
 }).join("");
+
 const matchedWord = dictionaryWords[selectedWord]
     ? selectedWord
     : null;
@@ -2158,7 +2537,6 @@ showWordFeedback("");
 openMeaningModal(matchedWord);
 
 // Reveal the ending when all five words are found.
-
 if (
     dictionaryFound.size ===
     Object.keys(dictionaryWords).length
@@ -2192,6 +2570,7 @@ if (feedback) {
 }
 
 /* ===== CREATE THE SAVED MEANING ===== */
+
 function createDictionaryEntry(word) {
 const data = dictionaryWords[word];
 
@@ -2252,6 +2631,9 @@ if (closeButton) {
 }
 
 }
+
+/* ===== CLOSE THE MEANING POPUP ===== */
+
 function closeMeaningModal() {
 const modal = document.getElementById("meaningModal");
 
@@ -2300,6 +2682,8 @@ function finishDictionary() {
   document.querySelector('.continuation-button').hidden = true;
     showScreen("storyMysteryScreen");
 }
+
+// Build the grid when the page loads.
 startWordSearch();
   const missingWordQuestions = [
 {
@@ -2379,6 +2763,7 @@ paragraph.innerHTML = '';
 paragraph.appendChild(
     document.createTextNode(question.before)
 );
+
 const blank = document.createElement('span');
 blank.className = 'story-blank';
 blank.textContent = '______';
@@ -2432,7 +2817,8 @@ if (choice === question.answer) {
     document.querySelector('.story-blank').textContent = question.answer;
 
     feedback.textContent = 'Correct! You remember it ♡';
-setTimeout(function() {
+
+    setTimeout(function() {
         currentStoryQuestion++;
 
         if (currentStoryQuestion >= missingWordQuestions.length) {
@@ -2471,7 +2857,9 @@ document.getElementById('storyReward').scrollIntoView({
 
 }
 
-function openStoryContinuation() {document.getElementById('storyReward').hidden = true;
+function openStoryContinuation() {
+  
+document.getElementById('storyReward').hidden = true;
 document.querySelector('.continuation-button').hidden = false;
 document.getElementById('storyContinuation').hidden = false;
 
@@ -2523,7 +2911,8 @@ const archiveChapters = [
 "Because you have your own way of making conversations feel alive, (this is what actually makes woaini :1)",
 "Because I like your unfiltered little moments, (i don't love u for somebody u're not)"]
     },
-{
+
+    {
         title: "The 100 Reasons Why",
         reasons: [
             "Because even your complaints can be entertaining, (that's why i love teasing u)",
@@ -2584,6 +2973,7 @@ const archiveChapters = [
 "Because my appreciation for you isn't dependent on how interesting your day is, (wish u all the good and interesting days ahead)."
         ]
     },
+
     {
         title: "The 100 Reasons Why",
         reasons: [
@@ -2628,6 +3018,7 @@ function openArchive() {
         block: 'start'
     });
 }
+
 function openArchiveChapter(chapterIndex) {
     currentArchiveChapter = chapterIndex - 1;
 
@@ -2650,7 +3041,6 @@ function renderArchiveChapter() {
     document.getElementById('archiveChapterTitle').textContent =
         chapter.title;
 
-    document.getElementById('archiveChapterIntro').textContent =
         chapter.intro;
 
     const reasonContainer = document.getElementById('archiveReasons');
@@ -2743,5 +3133,6 @@ function nextArchiveChapter() {
 
     </div>
 
-</div></body>
+</div>
+</body>
 </html>
