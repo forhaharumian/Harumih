@@ -3,7 +3,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#18392b">
-<title>The Vipvop Project ♡</title><style>
+<title>The Haharumian ♡</title><style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
 
 :root {
@@ -85,7 +85,7 @@ header {
 }
 
 .chapter {
-    color: var(--muted);
+    color: var(--pink);
 }
 
 .screen {
@@ -150,7 +150,7 @@ h2 {
     max-width: 340px;
     margin-top: 20px;
     color: var(--muted);
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.9;
 }
 
@@ -202,7 +202,7 @@ h2 {
     border: 1px solid #efa9bb40;
     border-radius: 7px;
     background: #fff5e908;
-    text-align: left;
+    text-align: justify;
     line-height: 1.9;
 }
 
@@ -263,14 +263,14 @@ h2 {
     font-size: 9px;
     letter-spacing: 1.5px;
 }
-  .garden-button {
+  
+.garden-button {
     position: relative;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    padding: 15px 42px 15px 19px;
+    padding: 15px 19px;
     margin-top: 12px;
     box-sizing: border-box;
 
@@ -299,18 +299,6 @@ h2 {
         background 0.25s ease;
 }
 
-.garden-button > span:first-child {
-    flex: 1;
-    text-align: center;
-}
-
-.garden-button .button-arrow {
-    position: absolute;
-    right: 17px;
-    font-size: 20px;
-    transition: transform 0.25s ease;
-}
-
 .garden-button:active {
     transform: scale(0.97);
 }
@@ -319,9 +307,6 @@ h2 {
     box-shadow: 0 7px 25px rgba(239, 169, 187, 0.3);
 }
 
-.garden-button:hover .button-arrow {
-    transform: translate(3px, -3px);
-}
 
 .reward-card {
     margin-top: 25px;
@@ -352,7 +337,7 @@ h2 {
 
 .reward-label {
     color: #a8c5a0;
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 2.5px;
     margin-bottom: 12px;
 }
@@ -365,7 +350,8 @@ h2 {
 
 .reward-message {
     color: #fff5e9;
-    font-size: 14px;
+    text-align: justify;
+    font-size: 12px;
     line-height: 1.9;
     font-weight: 400;
 }
@@ -645,24 +631,56 @@ transform: scale(0.95);
     }
 }
 
+
 /* ===== POEM CARD ===== */
 
 .poem-card {
     margin-top: 25px;
-    padding: 24px 18px;
-    border: 1px solid rgba(140, 187, 232, 0.55);
-    border-radius: 20px;
-    background: linear-gradient(
-        160deg,
-        rgba(92, 139, 196, 0.15),
-        rgba(239, 169, 187, 0.06)
-    );
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+
     animation: rewardAppear 0.8s ease both;
 }
 
 .poem-card[hidden] {
     display: none;
 }
+
+/* ===== POEM HEADER ===== */
+
+.poem-header {
+    text-align: center;
+    padding: 22px 16px 25px;
+    margin-bottom: 22px;
+
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(140, 187, 232, 0.22);
+    border-radius: 16px;
+}
+
+/* ===== POEM CONTENT ===== */
+
+.poem-content {
+    padding: 22px 18px;
+
+    background: rgba(10, 35, 30, 0.22);
+    border: 1px solid rgba(140, 187, 232, 0.25);
+    border-radius: 16px;
+}
+
+.poem-content .poem-divider {
+    text-align: center;
+    line-height: 1.9;
+    margin: 5px 0 5px;
+}
+
+.poem-content .poem-text {
+    padding: 5px 3px;
+    text-align: left;
+}
+
 
 .poem-flower {
     font-size: 36px;
@@ -677,26 +695,68 @@ transform: scale(0.95);
 
 .poem-intro {
     color: #fff5e9;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.9;
 }
 
 .poem-divider {
     color: #8cbbe8;
-    letter-spacing: 5px;
-    margin: 20px 0;
+    letter-spacing: 0px;
+    font-size: 14px;
+    margin: 15px 0;
 }
 
 .poem-text {
-    color: #fff5e9;
-    font-size: 14px;
+    white-space: pre-line;
+    text-align: justify;
     line-height: 2;
-    white-space: pre-wrap;
-    overflow-wrap: anywhere;
-    margin: 20px 0;
-    padding: 15px 10px;
-    border-left: 2px solid #8cbbe8;
-    text-align: left;
+    font-size: 12px;
+    color: #d5dbea;
+    padding: 10px 12px;
+    overflow-wrap: break-word;
+  }
+
+  
+.poem-note {
+    margin-top: 35px;
+    padding: 24px 20px;
+    background: rgba(75, 125, 190, 0.08);
+    border: 1px solid rgba(120, 165, 220, 0.25);
+    border-radius: 16px;
+    text-align: justify;
+    position: relative;
+}
+
+.poem-note-divider {
+    text-align: center;
+    color: #91acd1;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.poem-note-title {
+    color: #b5cbea;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.poem-note p:not(.poem-note-title):not(.poem-note-ending) {
+    color: #c3cddd;
+    font-size: 12px;
+    line-height: 1.9;
+    margin-bottom: 12px;
+}
+
+.poem-note-ending {
+    color: #9dbbe2;
+    font-size: 12px;
+    text-align: right;
+    margin-top: 1px;
+    margin-bottom: 0;
 }
 
 .book-option:disabled {
@@ -725,7 +785,7 @@ max-width: 350px;
 margin: 0 auto 24px;
 color: #d0d8ce;
 line-height: 1.8;
-font-size: 14px;
+font-size: 12px;
 }
 
 .word-list {
@@ -912,21 +972,20 @@ animation: modalFadeIn 0.25s ease both;
 }
 
 .meaning-card {
-width: 100%;
-max-width: 390px;
-max-height: 85vh;
-overflow-y: auto;
-box-sizing: border-box;
-padding: 27px 23px;
-border: 1px solid #d0a2b6;
-border-radius: 18px;
-background: #17271d;
-color: #f2e7ec;
-text-align: center;
-box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
-animation: modalCardReveal 0.4s ease both;
+    width: 100%;
+    max-width: 390px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 27px 23px;
+    border: 1px solid #d0a2b6;
+    border-radius: 18px;
+    background: #17271d;
+    color: #f2e7ec;
+    text-align: center;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+    animation: modalCardReveal 0.4s ease both;
 }
-
 .meaning-card h2 {
 margin: 12px 0 18px;
 color: #e8b8ca;
@@ -1031,7 +1090,7 @@ margin: 0;
 color: #f0eee7;
 font-size: 15px;
 line-height: 2;
-text-align: left;
+text-align: justify;
 }
 
 .story-blank {
@@ -1039,7 +1098,6 @@ display: inline-block;
 min-width: 72px;
 padding: 0 5px;
 color: #e8b8ca;
-border-bottom: 2px dashed #d8a8bd;
 text-align: center;
 font-weight: 700;
 }
@@ -1127,11 +1185,17 @@ line-height: 1.5;
 
 .continuation-text {
 margin-top: 20px;
-text-align: left;
+text-align: justify;
 white-space: pre-line;
 color: #f0eee7;
 font-size: 14px;
 line-height: 2;
+}
+
+.continuation-button {
+    width: 100%;
+    display: block;
+    margin-top: 20px;
 }
 
 .story-container [hidden] {
@@ -1195,21 +1259,219 @@ footer {
         transition-duration: .01ms !important;
     }
 }
+
+.archive-container {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 35px 22px 50px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.archive-title {
+    color: #e8b8ca;
+    font-size: 29px;
+    letter-spacing: 1px;
+    margin: 12px 0;
+}
+
+.archive-intro {
+    color: #e8e1d8;
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 340px;
+    margin: 0 auto;
+}
+
+.archive-divider {
+    color: #f0ecef;
+    margin: 25px 0;
+    letter-spacing: 4px;
+}
+
+.archive-folders {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 28px;
+}
+
+.archive-folder {
+    position: relative;
+    width: 100%;
+    padding: 23px 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 13px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.archive-folder:active {
+    transform: scale(0.98);
+}
+
+.folder-pink {
+    background: #513342;
+    color: #f3dce5;
+}
+
+.folder-green {
+    background: #304a38;
+    color: #e0ebdc;
+}
+
+.folder-blue {
+    background: #293b53;
+    color: #dce5f3;
+}
+
+.folder-cream {
+    background: #514a3b;
+    color: #f0e6d2;
+}
+
+.folder-number {
+    font-size: 10px;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.folder-name {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.folder-range {
+    font-size: 11px;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.folder-description {
+    font-size: 12px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.archive-footer {
+    margin-top: 35px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #c9a9b6;
+}
+.archive-back {
+    display: block;
+    margin: 0 0 30px;
+    padding: 9px 0;
+    border: none;
+    background: transparent;
+    color: #e8c6d4;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.archive-reasons {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 25px;
+}
+
+.archive-reason-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 18px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(220,190,200,0.2);
+    border-radius: 12px;
+    text-align: left;
+}
+
+.reason-number {
+    color: #d6a9ba;
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding-top: 3px;
+}
+
+.reason-text {
+    color: #f0e7e9;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.archive-next {
+    margin-top: 30px;
+    width: 100%;
+}
+
+  .archive-ending {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px 22px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.ending-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #9b7180;
+    margin-bottom: 12px;
+}
+
+.archive-ending h2 {
+    font-size: 25px;
+    color: #accdf9;
+    margin-bottom: 25px;
+}
+
+.ending-text {
+    text-align: left;
+    line-height: 1.8;
+    font-size: 13px;
+    color: #5d5551;
+}
+
+.ending-text p {
+    margin-bottom: 17px;
+}
+
+.archive-ending .ending-signature {
+    margin-top: 30px;
+    text-align: right;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+  #archiveChapterNumber {
+    font-family: 'Georgia', serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-style: italic;
+  }
 </style></head><body><div class="ambient one"></div>
 <div class="ambient two"></div><main class="container"><header>
-    <span class="brand">✿</span>
-    <span class="chapter" id="chapter">:)</span>
+    <span class="brand">୨ৎ</span>
+    <span class="chapter" id="chapter">୨ৎ</span>
 </header><!-- SCREEN 1: WELCOME --><section class="screen" id="welcome"><div class="flower">🌷</div>
 
-<p class="eyebrow">A VIPVOPSHIP PROJECT PRESENTS</p>
+<p class="eyebrow">A PROJECT BY LUTWIKIWTUL</p>
 
 <h1>
-    The <br>
-    <span>Haharumian</span>
+    <span>The Haharumian</span>
 </h1>
 
 <p class="description">
-    There are a few things hidden here, think you can find them all?
+    Part of Vipvopship Celebration Day
 </p>
 
 <div class="divider">
@@ -1219,7 +1481,6 @@ footer {
 <button class="btn" onclick="openLetter()">
     OFF WE GO
 </button>
-
 
 </section><!-- SCREEN 2: LETTER --><section class="screen hidden" id="letterScreen"><p class="eyebrow">A PSST BEFORE THE 'ACTUAL' PART</p>
 
@@ -1235,7 +1496,7 @@ footer {
     </p>
         
     <p>
-        Um, so it's probably just some kind of mini-game thing (?) that I created to celebrate our third month (??) of vipvopship (???). The kind of game where you need to solve the mystery to unlock some rewards or reveal hidden things...yeah, didn't mean it actually has 'rewards' tho ;)
+        Um, so it's probably just some kind of mini-game thing (?) that I created to celebrate our third month (??) of vipvopship (???). The kind of game where you need to solve the mystery to unlock some rewards or reveal hidden things...yeah, didn't mean it actually has 'rewards' tho ;) 
     </p>
 
     <p>
@@ -1243,15 +1504,15 @@ footer {
     </p>
 
     <p> 
-        I might be enjoying myself too much while creating this, so you might find it a bit cringe later. I don't know how you've seen me so far, but even I myself think that these words ahead aren't like how the actual 'lutwik' would say. It's still lutwik tho, but with another personality you might rarely see. My other side that I can't show you, either out of shame or for my own sanity :)
+        I might be enjoying myself too much while creating this, so you might find it a bit cringe later. I don't know how you've seen me so far, but even I myself think that these words ahead aren't like how the actual 'lutwik' (✌︎︎✌︎︎) would say. It's still lutwik tho, but with another personality you might rarely see. My other side that I can't show you, either out of shame or for my own sanity ;) I guess I've just gotten so used to being a certain version of myself around you that showing this side feels a bit unfamiliar now (not in a bad way)
     </p>
   
     <p>
-       I'm not trying to threaten you here, but if you think you might cringe to death, then you don't need to click the next button ♡ I want you to be as comfortable as you can. If you still choose to continue this game, then good luck ;) 
+       I'm not trying to threaten you here, but if you think you might cringe to death, then you don't need to click the next button (!) I want you to be as comfortable as you can. If you still choose to continue this game, then good luck ;) 
     </p>
  
     <p>
-       I made this with pure joy, and so I hope you enjoy it too.
+       I made this with pure joy, and so I hope you enjoy it too ♡
 
      </p>
        
@@ -1267,30 +1528,16 @@ footer {
 
 </section><!-- SCREEN 3: FIRST CLUE --><section class="screen hidden" id="clueScreen"><div class="flower">🔎</div>
 
-<p class="eyebrow">MYSTERY 001 · CHAPTER I</p>
+<p class="eyebrow">MYSTERY 01</p>
 
-<h2>Where It All Began</h2>
-
-<p class="description">
-    Every story has a beginning.
-    Ours began with an anonymous message.
-</p>
-
+<h2>What Started It All?</h2>
 <div class="puzzle-card">
-    <div class="puzzle-icon">🌷</div>
-
-    <p>
-        Before we exchanged IDs, before we became
-        the friends we are today, there was a little
-        conversations happened anonymously.
-    </p>
-
-    <p class="question">
-        Do you remember the date when our story
-        first began?
-    </p>
-
-    <p class="note">Hint: A day in August 🌿</p>
+  
+  <p>
+        Every story has a beginning, so does ours. 
+        Before we exchanged ids, before we became the friends we are today, there was that one anonymous conversation that eventually led me to ask for your id. Do you remember the exact date  I first barged into your dms?</p>
+  
+    <p class="note">It should be easy, shouldn't it? </p>
 
     <div class="date-inputs">
         <input
@@ -1313,29 +1560,29 @@ footer {
     </div>
 
     <button class="btn" onclick="checkDate()">
-    <span>Unlock this memory</span>
-    <span class="button-arrow">↗</span>
+    <span>Of Course!</span>
 </button>
+</div>
 
 <div id="reward" class="reward-card" hidden>
     <div class="reward-flower">🌷</div>
 
-    <p class="reward-label">A LITTLE NOTE FOR YOU</p>
+    <p class="reward-label">OWYEAH, YOU REMEMBER IT!</p>
 
-    <h3>Thank you, Harumi.</h3>
+    <h3></h3>
 
     <p class="reward-message">
-        Thank you for listening to me that day,
-        for responding with such kindness,
-        and for being willing to exchange IDs with me.
-        It might have seemed like a little thing,
-        but it meant more to me than you know. ♡
+        It's actually this date, just in another month :1 With that being said, happy another 9th together, my love (ehm owyeah) <br><br>
+        Thank you for listening to me that day, for responding with such kindness, and for being willing to exchange ids with me. I never expected we'd be here, celebrating this kind of thing (wdim bruh), but I'm really, really, really grateful that this is happening.<br><br>
+        Meeting you is one of the nicest coincidences life has given me. Well, rather than a coincidence, I'd love to call it fate (ehm owyeah pt. 2). Funny how a random conversation (that's not actually random) could turn into something worth remembering this much. If I could go back to that day, I'd still choose to have that conversation with you all over again (stfu u jerk) <br><br>
+        I thanked myself for messaging you through your anonymous chat that night. No, no, actually, I should thank God for His mercy and blessings, for giving me a destiny as beautifully written as this one, for giving me a chance to meet His most gorgeous, pretty, perfect fallen angel... (I really need to stop here)<br><br>
+        Feeling cringe enough? Oh, don't be, because we've still got a long way to go :1 Your last warning was a slide ago, so you don't get another chance to back out now!
     </p>
-
-    <div class="reward-divider">✦ · · · ✦</div>
+  
+    <div class="reward-divider"></div>
 
     <p class="reward-footer">
-    Some beautiful things begin quietly.
+    Ready for another dose of cringe?
 </p>
 
 <button
@@ -1343,8 +1590,8 @@ footer {
     class="garden-button next-clue-button"
     onclick="goToNextClue()"
 >
-    <span>Continue the journey</span>
-    <span class="button-arrow">→</span>
+    <span>(˶˃𐃷˂˶)</span>
+    
 </button>
 
 </div>
@@ -1353,24 +1600,23 @@ footer {
 </div>
 
 <p class="note">
-    one clue at a time, one memory at a time ♡
+    ♡
 </p>
 
-</section><!-- MYSTERY 002: THE LIBRARY -->
+</section><!-- MYSTERY 02: THE LIBRARY -->
 <section id="libraryScreen" class="screen hidden">
 
-    <p class="eyebrow">MYSTERY 002 · CHAPTER II</p>
+    <p class="eyebrow">MYSTERY 02</p>
 
-    <h2>The Library of<br>Unspoken Words</h2>
+    <h2>What's Inside?<br></h2>
 
     <p class="description">
-        Three books rest in silence.<br>
-        Each holds a different secret.
-        One holds words written just for you.
+        Three books, three different colors.<br>
+        Each represents something about us, but only one holds a piece of me.
     </p>
 
     <p class="library-instruction">
-        Choose a book to discover what's inside.
+        Find the one that speaks to me!
     </p>
 
     <div class="book-shelf">
@@ -1437,58 +1683,110 @@ footer {
          class="butterfly-container"
          aria-hidden="true"></div>
 
-    <!-- POEM REWARD -->
-    <div id="poemCard" class="poem-card" hidden>
+   
+
+<!-- POEM REWARD -->
+<div id="poemCard" class="poem-card" hidden>
+
+    <!-- REWARD HEADER -->
+    <div class="poem-header">
 
         <div class="poem-flower">🦋</div>
 
-        <p class="eyebrow">A SECRET, JUST FOR YOU</p>
+        <p class="eyebrow">YOU FOUND THE RIGHT ONE!</p>
 
-        <h3>You Found the Right One.</h3>
+        <h3>It's The Bluest Book</h3>
 
         <p class="poem-intro">
-            Perhaps some words are easier to write than to say.
-            And perhaps, this is one of the things
+            Perhaps some words are easier to write than to say,
+            and perhaps, this is one of the things
             I've been wanting you to read.
         </p>
 
-        <div class="poem-divider">✦ · · · ✦</div>
-
-        <!-- ===================================== -->
-        <!-- TEMPEL PUISI LU TEPAT DI BAWAH SINI   -->
-        <!-- GANTI TEKS CONTOH DI BAWAH DENGAN PUISI -->
-        <!-- ===================================== -->
-
-        <div id="poemText" class="poem-text">
-            YOUR POEM GOES HERE
-        </div>
-
-        <!-- ===================================== -->
-        <!-- AKHIR BAGIAN PUISI                    -->
-        <!-- ===================================== -->
-
-        <button class="garden-button"
-                onclick="finishPoem()">
-            <span>Keep this memory</span>
-            <span class="button-arrow">♡</span>
-        </button>
-
     </div>
 
-    <p class="note">
-        not every secret is meant to stay hidden ♡
+
+    <!-- POEM CONTENT -->
+    <div class="poem-content">
+
+        <div class="poem-divider">
+            ✦ Cause I dream of you in colors that don't exist ✦
+        </div>
+
+        <div id="poemText" class="poem-text">
+            I dream of you in colors that don't exist
+            Every time I wake up I'd try to paint it on the canvas
+            Only to find it more impossible to describe <br>
+            It's pinker than pink
+            Greener than green
+            Bold like my blood
+            But maybe I'm just a bluff <br> 
+            I dream of you in colors that don't exist
+            Every time I wake up I'd look up at anything, perhaps I would find even just a single hint
+            But the hope really said, 'buddy, just keep hoping' 
+            And so, I always find nothing <br>
+            I dream of you in colors that don't exist
+            Every time I wake up I'd reach for my palette and pour all the paint I've got
+            That's when I'd finally realize <br>
+            I can't even recognize colors <br>
+            So why do I still dream of you in colors that I think never even exist?
+    <p class="poem-note-ending">09. 23</p>
+       
+    </div> <!-- penutup poemText -->
+
+</div> <!-- PENUTUP poemCard -->
+
+<!-- A LITTLE NOTE -->
+<div id="poemNoteCard" class="poem-note" hidden>
+
+    <div class="poem-note-divider">✦ ANOTHER PSST ✦</div>
+
+    <p class="poem-note-title">Behind the Colors</p>
+
+    <p>
+        I wrote this during a time when things felt a little different between us (iykyk).
+        Back then, I often wondered if I'd ever get to know you more,
+        get closer to you, or even have a place in your life.
+        You seemed like someone I could only admire from a distance,
+        someone I might never truly reach.
     </p>
+    <p>
+        That's where the idea of dreaming about colors that don't exist came from.
+        I thought those colors were nowhere to be found, simply because I couldn't recognize them.
+        But perhaps they had always existed, I just hadn't learned how to properly 'see' them.
+    </p>
+    <p>
+        Things are a little different now, aren't they? :1
+    </p>
+    <p>
+        
+        I'm not sure if I've found all those colors, but I'm glad I've come to know some of them after all this time. I'm glad I got to know you beyond the distance I once imagined. I'm not saying that I can finally 'reach' you, or that we're 'close', but at least now I know there's a little 'place' for me beside you, that I get to 'be' here with you.
+    </p>
+  <p> Thank you for being here with me too, my pink and green ♡
+  
+  </p>
 
-</section><!-- MYSTERY 003: THE DICTIONARY OF US --><section id="wordSearchScreen" class="screen hidden"><div class="dictionary-container">
+</div>
+    <button id="finishPoemButton"
+        class="garden-button"
+        onclick="finishPoem()"
+        hidden>
+    <span>(˶>⩊<˶)</span>
+    
+    </button>
+  </div>
 
-    <p class="chapter-label">MYSTERY 003</p>
+
+</section><!-- MYSTERY 03: THE DICTIONARY OF US --><section id="wordSearchScreen" class="screen hidden"><div class="dictionary-container">
+
+    <p class="eyebrow">MYSTERY 03</p>
 
     <h1 class="dictionary-title">
-        The Dictionary<br>of Us
+        What Do I Mean?
     </h1>
 
-    <p class="dictionary-intro">
-        Some words are hidden, waiting to be found.
+    <p class="description">
+        A poem doesn't have to be understood in every way, but there are a few words in mine that I'd like to tell you a little more about.<br>
         Find all five words to uncover their meanings.
     </p>
 
@@ -1501,14 +1799,14 @@ footer {
     </div>
 
     <p class="word-search-instruction">
-        Tap the letters in order to spell a hidden word.
+        Tap the letters 'one by one', 'in the right order', to reveal the hidden word.
     </p>
 
     <div id="wordGrid" class="word-grid"></div>
 
     <button type="button" class="garden-button"
             onclick="checkSelectedWord()">
-        Check word <span>→</span>
+        Check word
     </button>
 
     <button type="button" class="dictionary-reset"
@@ -1522,77 +1820,40 @@ footer {
     <div id="dictionaryEntries" class="dictionary-entries"></div>
 
     <div id="dictionaryEnding" class="dictionary-ending" hidden>
-        <p class="chapter-label">ALL WORDS FOUND</p>
-
-        <h2>Some words are easy to define.</h2>
-
-        <p>
-            Some people aren't.<br>
-            And perhaps, you are one of them.
-        </p>
+      <h2>All Words Found 𖹭 ֶָ֢</h2>
+        <p class="poem-intro">And that's what those five words mean to me. Maybe now, you'll see a little more of what I was trying to say.<br>
+        Of course, there's always more to a poem than the words written in it. But for now, I think these five are enough to tell you a little piece of my mind.<br>
+        A bit cheesy, wasn't it? Hate to break it to you, but this isn't even the cheesiest thing you'll find here...
+</p>
 
         <p class="ending-signature">
-            A little memory, just for you. ♡
+            ...we still got another game
         </p>
 
         <button type="button" class="garden-button"
                 onclick="finishDictionary()">
-            Keep this memory <span>→</span>
+            (˶˃ᆺ˂˶)
         </button>
     </div>
 
 </div>
 
-<!-- POP-UP MEANING -->
-<div id="meaningModal" class="meaning-modal"
-     role="dialog" aria-modal="true"
-     aria-labelledby="modalWord" hidden>
 
-    <div class="meaning-card">
 
-        <p class="chapter-label">A WORD DISCOVERED ✨</p>
-
-        <h2 id="modalWord"></h2>
-
-        <p class="part-of-speech">Definition</p>
-
-        <p id="modalDefinition" class="modal-definition"></p>
-
-        <div class="modal-hidden-meaning">
-            <p class="part-of-speech">A meaning of our own ♡</p>
-            <p id="modalHiddenMeaning"></p>
-        </div>
-
-        <button type="button" class="garden-button"
-                onclick="closeMeaningModal()">
-            Keep this meaning <span>→</span>
-        </button>
-
-    </div>
-
-</div>
-
-</section><!-- MYSTERY 004: THE MISSING WORDS --><section id="storyMysteryScreen" class="screen hidden">
-    <div class="story-container">
-        <p class="chapter-label">MYSTERY 004</p>    <h1 class="story-title">The Missing<br>Words</h1>
-
-    <p class="story-intro">
-        Every story has its own words.
-        How many of them do you remember?
-    </p>
+</section><!-- MYSTERY 04: THE MISSING WORDS --><section id="storyMysteryScreen" class="screen hidden">
+        <p class="eyebrow" id="storyEyebrow">MYSTERY 04</p>
+<h1 class="story-title" id="storyTitle">What's The Story?</h1>
 
     <div id="storyStart">
         <div class="story-book-icon">📖</div>
 
-        <p class="story-description">
-            A story was once told here.
-            Some words have gone missing.
-            Find them to restore the story.
+        <p class="description">
+            Remember that one night when I told you a story just to cheer you up? Well, here we are, finding that short story again, except some of its words seem to have gone missing. <br> Let's see if you can put it back together!<br><br>
         </p>
 
         <button type="button" class="garden-button"
             onclick="startStoryMystery()">
-            Restore the Story <span>→</span>
+            (∩˃o˂∩)
         </button>
     </div>
 
@@ -1604,204 +1865,86 @@ footer {
         </div>
 
         <p class="story-instruction">
-            Choose the missing word.
+            Choose the missing word!
         </p>
 
         <div id="storyChoices" class="story-choices"></div>
 
         <p id="storyFeedback" class="story-feedback"
             aria-live="polite"></p>
-
-        <div id="storyWrongActions" hidden>
-            <p class="story-hint">
-                Perhaps the original story is waiting
-                for you in your chatroom. ♡
-            </p>
-
-            <button type="button" class="garden-button"
-                onclick="retryStoryQuestion()">
-                Try Again <span>↻</span>
-            </button>
-        </div>
     </div>
 
     <div id="storyReward" class="story-reward" hidden>
-        <p class="chapter-label">STORY RESTORED ✨</p>
+        <p class="chapter-label">GOOD JOB, MY LOVE!</p>
 
-        <h2>Every Word Found Its Way Home.</h2>
+        <h2>────୨ৎ────</h2>
 
-        <p>
-            You've found every missing word.
-            But this story was never finished, was it?
-        </p>
-
-        <p>
-            Perhaps there's another page waiting just for you.
+        <p class="reward-message">
+            You've found every missing word, but this story was never finished, was it? Surely we're not going to leave these two poor characters wondering what happens next. <br><br>
+            Thanks to you, I've survived another writer's block :1 <br><br>
+            I know it might not be particularly important, but you still have to read how their story continues, whether you like it or not!<br><br>
         </p>
 
         <button type="button" class="garden-button"
             onclick="openStoryContinuation()">
-            Reveal the Missing Chapter <span>→</span>
+            ( ˵ •̀ □ •́ ˵ )
         </button>
     </div>
 
-    <div id="storyContinuation" class="story-continuation" hidden>
-        <p class="chapter-label">A LITTLE EXTRA CHAPTER</p>
+    <div id="storyContinuation" class="story-continuation" hidden><div class="reward-flower">🪶</div>
+        <p class="chapter-label"></p>
+      <h2>THE LAST CHAPTER</h2>
 
-        <h2>To Be Continued...</h2>
+        <div id="continuationText" class="continuation-text">
+Tanpa sadar gua nelen ludah. Bahkan selai ubur ubur fresh best selling terjual kurang lebih 10k picis yang abis gua beli dari sodara Spongebob kayak kalah seger dibanding kalo gua makan si nelayan imut. Pas doi udah berjarak semeteran doang dari gua, gua baru ngeh kalo situasi ini berbahaya cok. Gua mermet, doi orang, ini misalkan gua dipoto terus dipiralin ke tiktok, apa gak abis gua diburu pod caster. Akhirnya karna gak siap pemes, gua pun dengan berat hati bersiap meluncur kembali ke laut dalam dan ninggalin si imut. Baru aja nyelup dikit, doi malah tereak, tentu masih sambil deketin gua, "eh jangan kabur!"
 
-        <div id="continuationText" class="continuation-text">Tanpa sadar gua nelen ludah. Bahkan selai ubur ubur fresh best selling terjual 10k picis yg abis gua beli dari sodara Spongebob kayak kalah seger dibanding kalo gua makan si nelayan imut. Pas doi udah berjarak semeteran doang dari gua, gua baru ngeh kalo situasi ini berbahaya cok. Gua mermet, doi orang, ini misalkan gua dipoto terus dipiralin ke tiktok, apa gak abis gua diburu pod caster.Akhirnya karna gak siap pemes, gua pun dgn berat hati bersiap meluncur kembali ke laut dalam dan ninggalin si imut. Baru aja nyelup dikit, doi malah tereak, tentu masih sambil deketin gua, "eh jangan kabur!"
-
-Gua yg udah ancang ancang nyelem pun mau gak mau noleh, "apaanmut?" tanya gua sokab. Eh si imut ternyata juga rada rada sokab coy. Bukannya nanyain makhluk apakah gua sebenarnya, doi malah nunjukin jalanya yg timbul tenggelam, makin jauh dibawa ombak ke tengah laut.
+Gua yang udah ancang ancang nyelem pun mau gak mau noleh, "apaanmut?" tanya gua sokab. Eh si imut ternyata juga rada rada sokab coy. Bukannya nanyain makhluk apakah gua sebenarnya, doi malah nunjukin jalanya yang timbul tenggelam, makin jauh dibawa ombak ke tengah laut.
 
 "ambilin itu dong, tolongin acu.."
 
-Beh, apa gak langsung geter dada gua dengernya. Si imut meminta tolongkan pada gua, bisa apa selain gua nurutkan? Jangankan jala, seluruh isi lautan juga gua kasih kalo doi yg minta. Entah pake susuk pemikat apa ini orang, dgn gampangnya meluluhkan gua yg biasanya kebal.
+Beh, apa gak langsung geter dada gua dengernya. Si imut meminta tolongkan pada gua, bisa apa selain gua nurutkan? Jangankan jala, seluruh isi lautan juga gua kasih kalo doi yang minta. Entah pake susuk pemikat apa ini orang, dengan gampangnya meluluhkan gua yang biasanya kebal.
 
-Tanpa pikir panjang akhirnya gua kejar itu jala. Dgn kecepatan setara speedboat, gua berenang ke tengah laut, lalu balik lagi ke arah doi yg clingak clinguk nungguin gua. Tapi karna gua gak mau dia lihat ekor hejo gua yg makin terang karna eksaitid, gua menahan diri untuk terlalu minggir ke pantai. Dgn separuh badan masih di aer, gua lambai lambaikanlah jala yg udah di tangan.
+Tanpa pikir panjang akhirnya gua kejar itu jala. Dengan kecepatan setara speedboat, gua berenang ke tengah laut, lalu balik lagi ke arah doi yang clingak clinguk nungguin gua. Tapi karna gua gak mau dia lihat ekor hejo gua yang makin terang karna eksaitid, gua menahan diri untuk terlalu minggir ke pantai. Dengan separuh badan masih di aer, gua lambai lambaikanlah jala yang udah di tangan.
 
-"ini gua lempar yak?" tanya gua. Untung si imut kagak congek, dia ngangguk sambil acungin jempolnya yg imut juga. Ini manusia dari ujung rambut ampe jari kaki imut semua dah, kata gua. Gua yg gak bisa tahan buat senyum keimutan, ngebatin tipis dalam hati, when yah gua punya kaki, biar bisa ngejar doi.
+"ini gua lempar yak?" tanya gua. Untung si imut kagak congek, dia ngangguk sambil acungin jempolnya yang imut juga. Ini manusia dari ujung rambut ampe jari kaki imut semua dah, kata gua. Gua yang gak bisa tahan buat senyum keimutan, ngebatin tipis dalam hati, when yah gua punya kaki, biar bisa ngejar doi.
 
-Setelah gua melempar itu jala ke deket si nelayan (untung kagak kena timpuk), dan ngejempolin ucapan terimakasihnya yg gak kalah imut, gua pun yg semakin sadar atas perbedaan kami akhirnya bersiap sapamit. Kan gak lucu kalo hasrat ngegondol manusia gua menang dan bikin gua jadi kriminal laut dalam.
+Setelah gua melempar itu jala ke deket si nelayan (untung kagak kena timpuk), dan ngejempolin ucapan terimakasihnya yang gak kalah imut, gua pun yang semakin sadar atas perbedaan kami akhirnya bersiap sapamit. Kan gak lucu kalo hasrat ngegondol manusia gua menang dan bikin gua jadi kriminal laut dalam.
 
-Tapi sebelum pamit, gua memberanikan diri buat sokab lagi, nanyain dgn lantang, "lu siapa namanya?"
+Tapi sebelum pamit, gua memberanikan diri buat sokab lagi, nanyain dengan lantang, "lu siapa namanya?"
 
-Si imut yg sekarang udah nenteng jalanya, (kayaknya siap siap mau balik ngais ikan) senyum manis pas ngejawab, "harumiiiii, kamu siapa, met?"
+Si imut yang sekarang udah nenteng jalanya, (kayaknya siap siap mau balik ngais ikan) senyum manis pas ngejawab, "harumiiiii, kamu siapa, met?"
 
-Entah itu maksudnya mermet apa jamet, gua yg kesenangan berasa dapet pet name, menjawab salting, "adalah pokoknya."
+Entah itu maksudnya mermet apa jamet, gua yang kesenangan berasa dapet pet name, menjawab salting, "adalah pokoknya."
 
-Lalu saat gua pikir pertemuan ini tlah akan usai dan kami memang ditakdirkan hanya bisa saling ber good bye, eh doi malah ngeluarin hp nya dari kantong. Ngeri mau dipoto, gua agak nyelem dikit ke aer, tapi ternyata kagak dipoto gua coy. Doi abis pencet pencet hp nya malah nanya, yg jadi akhir pertemuan kami di siang yg hareudang itu...
+Lalu saat gua pikir pertemuan ini tlah akan usai dan kami memang ditakdirkan hanya bisa saling ber good bye, eh doi malah ngeluarin hp nya dari kantong. Ngeri mau dipoto, gua agak nyelem dikit ke aer, tapi ternyata kagak dipoto gua coy. Doi abis pencet pencet hp nya malah nanya, "main tele gak kamuu?"
 
-"main tele gak kamuu?"
-
-Meski agak kebingungan, gua ngangguk aja. Jaman sekarang sapa yg kagak main tu apk, kan. Eh abis itu si imut nanya lagi, yg jadi akhir pertemuan kami di siang yg hareudang itu...
+Meski agak kebingungan, gua ngangguk aja. Jaman sekarang sapa yang kagak main tu apk, kan. Eh abis itu si imut nanya lagi, yang jadi akhir pertemuan kami di siang yang hareudang itu...
 
 "usn kamu apa, adalah pokoknya?"
 
 </div>
 
-        <p class="ending-signature">
-            D.I.E.N.G 
+<p class="ending-signature">D.I.E.N.G</p>
+            </div>
+
+            <div class="continuation-button" hidden>
+                <button class="garden-button" onclick="openLastPage()">
+                    °‧ 𓆝 𓆟 𓆞 ·｡
+                </button>
+            </div>
+
+    </section><section id="lastPageScreen" class="screen hidden"><div class="flower">🌷</div>
+    <div class="last-page-container">
+
+        <p class="eyebrow">THE 'SAID' ENDING</p>
+
+        <h2>────୨ৎ────</h2>
+
+        <p class="reward-message">This is (probably) the one thing you've been waiting for, the ending of this whatever-it-is. Unfortunately...this is...just another intro...to the(really) last thing you've gotta read.<br><br>
+        I know you're probably tired of this by now, maybe even sick of it. All the puzzles, all the reading, all the cheesy nonsense...you might be cringing so hard you wanna close this thing already, and honestly, I wouldn't blame you (I'd probably do the same, too)<br><br>
+        If you wanna stop here, that's fine. Buuut...just know that you'll have to redo all those mysteries to get back here again. So might as well finish what you started, right, my love? (evil laugh)<br><br>
         </p>
-    </div>
-</div>
-
-</section>
-  
-  <footer>
-    <span>PART OF HAHARUMIAN </span>
-    <span>✿</span>
-    <span>HAPPY NOVEMBER</span>
-    
-</footer></main><script>
-function showScreen(target) {
-    const screens = [
-        "welcome",
-        "letterScreen",
-        "clueScreen",
-        "libraryScreen",
-        "wordSearchScreen"
-    ];
-
-    screens.forEach(function(id) {
-        const screen = document.getElementById(id);
-        if (screen) {
-            screen.classList.add("hidden");
-        }
-    });
-
-    const targetScreen = document.getElementById(target);
-
-    if (targetScreen) {
-        targetScreen.classList.remove("hidden");
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-}
-function openLetter() {
-    document.getElementById("chapter").textContent = "CHAPTER 02";
-    showScreen("letterScreen");
-}
-
-function openClue() {
-    document.getElementById("chapter").textContent = "CHAPTER 03";
-    showScreen("clueScreen");
-}
-  function checkDate() {
-    const day = document.getElementById("dayInput").value;
-    const month = document.getElementById("monthInput").value;
-    const feedback = document.getElementById("feedback");
-    const reward = document.getElementById("reward");
-
-    if (Number(day) === 9 && Number(month) === 8) {
-        feedback.textContent = "✦ A memory unlocked ✦";
-        reward.hidden = false;
-
-        reward.scrollIntoView({
-            behavior: "smooth",
-            block: "nearest"
-        });
-    } else {
-        reward.hidden = true;
-
-        feedback.textContent =
-            "Not quite, little detective. Take another look at our memories. 🌿";
-    }
-}
-
-
-function goToNextClue() {
-showScreen("libraryScreen");
-}
-/* ===== CHOOSE A BOOK ===== */
-
-let bookChosen = false;
-
-function chooseBook(color, button) {
-    if (bookChosen) return;
-
-    const feedback = document.getElementById("libraryFeedback");
-    const butterflies = document.getElementById("butterflyContainer");
-    const poemCard = document.getElementById("poemCard");
-
-    if (color === "blue") {
-        bookChosen = true;
-
-        feedback.textContent = "✦ You found the blue one. ✦";
-
-        document.querySelectorAll(".book-option").forEach(book => {
-            book.disabled = true;
-        });
-
-        button.querySelector(".book").style.boxShadow =
-            "0 0 25px rgba(140, 187, 232, 0.75)";
-
-        createButterflies("🦋", 8);
-
-        setTimeout(() => {
-            poemCard.hidden = false;
-
-            poemCard.scrollIntoView({
-                behavior: "smooth",
-                block: "center"
-            });
-        }, 900);
-
-    } else {
-        feedback.textContent =
-            "Not this one, little detective. Some secrets are still waiting for you. 🌿";
-
-        button.querySelector(".book").style.transform =
-            "rotate(-7deg)";
-
-        createButterflies("🦋", 5, color);
-
-        setTimeout(() => {
-            button.querySelector(".book").style.transform = "";
-        }, 450);
-    }
-}
-
-/* ===== BUTTERFLY ANIMATION ===== */
+* ===== BUTTERFLY ANIMATION ===== */
 
 function createButterflies(symbol, amount, color = "blue") {
     const container = document.getElementById("butterflyContainer");
@@ -1847,131 +1990,33 @@ MYSTERY 003: THE DICTIONARY OF US
 
 const dictionaryWords = {
 COLORS: {
-meaning: "The things that make the world less ordinary.",
-hidden: "Some colors remind me of you, while others remind me of myself. Somehow, they look better together."
+meaning: "Color(s) is the visual perception of light wavelengths interacting with the cone cells in the human eye.",
+hidden: "Things I've always had within me, but never thought of exploring more deeply until I met you."
 },
 
 CANVAS: {
-    meaning: "A surface on which something is created.",
-    hidden: "Maybe every memory is a little stroke of color, and the people we meet become part of the picture."
+    meaning: "Canvas is a strong, heavy, plain-woven fabric historically made from hemp and now typically made from cotton, linen, or synthetic fibers.",
+    hidden: "A place where I pour all the colors I have, hoping that someday I'll find the one I've been looking for all along."
 },
 
 PINK: {
-    meaning: "A color often associated with roses, softness, and warmth.",
-    hidden: "A little reminder of someone who makes ordinary things feel softer."
+    meaning: "Pink is a pale tint of red mixed with white.",
+    hidden: "It symbolizes some of the things I've come to feel after meeting you; love, romance, kindness, compassion, playfulness, and warmth."
 },
 
 GREEN: {
-    meaning: "The color of leaves, growth, and new beginnings.",
-    hidden: "A reminder that some things grow quietly, even when nobody notices."
+    meaning: "Green is the color between blue and yellow on the visible spectrum, resembling fresh grass or emeralds.",
+    hidden: "It's considered a cool and soothing color, one that brings a sense of calm and balance, just like your presence."
 },
 
 YOU: {
-    meaning: "The pronoun used to address the person being spoken to.",
-    hidden: "In this dictionary, you means someone who became part of a story without knowing how important their chapter would be."
+    meaning: "You is a second-person personal pronoun used to refer to the person or people being spoken or written to.",
+    hidden: "The one I used to dream of, the one I hold dear, the one whose presence I cherish, the one whose attention I find myself longing for, the one I miss every second, the one this whole project was made for, the one behind @souignne, the one and only Harumi."
 }
 
 };
 
-/* ===== PUZZLE CONFIGURATION ===== */
-
-// Word positions: horizontal, vertical, and diagonal.
-// The remaining cells are filled with random letters.
-
-const dictionaryPlacements = [
-{ word: "COLORS", row: 0, col: 0, dr: 0, dc: 1 },
-{ word: "CANVAS", row: 1, col: 0, dr: 1, dc: 0 },
-{ word: "PINK",   row: 1, col: 2, dr: 1, dc: 1 },
-{ word: "GREEN",  row: 2, col: 8, dr: 1, dc: 0 },
-{ word: "YOU",    row: 7, col: 2, dr: 1, dc: 1 }
-];
-
-const dictionarySize = 10;
-
-let dictionaryLayout = [];
-let dictionarySelection = [];
-let dictionaryFound = new Set();
-let dictionaryFoundCells = new Set();
-
-/* ===== CREATE THE PUZZLE ===== */
-
-function startWordSearch() {
-const grid = document.getElementById("wordGrid");
-
-if (!grid || grid.dataset.ready === "yes") return;
-
-grid.dataset.ready = "yes";
-
-// Create an empty 10 x 10 grid.
-dictionaryLayout = Array.from(
-    { length: dictionarySize },
-    () => Array(dictionarySize).fill("")
-);
-
-// Place the five hidden words.
-dictionaryPlacements.forEach(function (placement) {
-    for (let i = 0; i < placement.word.length; i++) {
-        const row = placement.row + placement.dr * i;
-        const col = placement.col + placement.dc * i;
-
-        dictionaryLayout[row][col] = placement.word[i];
-    }
-});
-
-// Fill empty cells with random letters.
-const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-for (let row = 0; row < dictionarySize; row++) {
-    for (let col = 0; col < dictionarySize; col++) {
-        if (!dictionaryLayout[row][col]) {
-            dictionaryLayout[row][col] =
-                alphabet[Math.floor(Math.random() * alphabet.length)];
-        }
-    }
-}
-
-// Render the letter buttons.
-grid.innerHTML = "";
-
-dictionaryLayout.forEach(function (row, r) {
-    row.forEach(function (letter, c) {
-        const button = document.createElement("button");
-
-        button.type = "button";
-        button.className = "letter-cell";
-        button.textContent = letter;
-        button.dataset.index = r * dictionarySize + c;
-        button.setAttribute("aria-label", letter);
-        button.setAttribute("aria-pressed", "false");
-
-        button.addEventListener("click", function () {
-            selectDictionaryLetter(button);
-        });
-
-        grid.appendChild(button);
-    });
-});
-
-}
-
-/* ===== SELECT LETTERS IN A STRAIGHT LINE ===== */
-
-function selectDictionaryLetter(button) {
-if (
-button.classList.contains("word-found") ||
-button.classList.contains("selected")
-) {
-return;
-}
-
-const index = Number(button.dataset.index);
-const row = Math.floor(index / dictionarySize);
-const col = index % dictionarySize;
-
-if (dictionarySelection.length >= 1) {
-    const firstIndex = dictionarySelection[0];
-    const firstRow = Math.floor(firstIndex / dictionarySize);
-    const firstCol = firstIndex % dictionarySize;
+const firstCol = firstIndex % dictionarySize;
 
     const dr = row - firstRow;
     const dc = col - firstCol;
@@ -1984,13 +2029,12 @@ if (dictionarySelection.length >= 1) {
             (dr === 0 && dc === 0)
         ) {
             showWordFeedback(
-                "Choose a neighboring letter, horizontally, vertically, or diagonally. ♡"
+                "Choose a neighboring letter, horizontally, vertically, or diagonally ♡"
             );
             return;
         }
     } else {
-        // Tentukan arah berdasarkan dua huruf pertama.
-        const secondIndex = dictionarySelection[1];
+const secondIndex = dictionarySelection[1];
         const secondRow = Math.floor(secondIndex / dictionarySize);
         const secondCol = secondIndex % dictionarySize;
 
@@ -2008,7 +2052,7 @@ if (dictionarySelection.length >= 1) {
             col !== previousCol + stepCol
         ) {
             showWordFeedback(
-                "Keep following the same direction to complete the word. 🌿"
+                "Keep following the same direction to complete the word!"
             );
             return;
         }
@@ -2045,7 +2089,7 @@ showWordFeedback("");
 function checkSelectedWord() {
 if (dictionarySelection.length === 0) {
 showWordFeedback(
-"Choose the letters of a hidden word first. 🌿"
+"Choose the letters of a hidden word first!"
 );
 return;
 }
@@ -2055,14 +2099,13 @@ const selectedWord = dictionarySelection.map(function (index) {
         Math.floor(index / dictionarySize)
     ][index % dictionarySize];
 }).join("");
-
 const matchedWord = dictionaryWords[selectedWord]
     ? selectedWord
     : null;
 
 if (!matchedWord) {
     showWordFeedback(
-        "Not quite! Try another path through the letters. ♡"
+        "Try another path through the letters ♡"
     );
 
     clearSelection();
@@ -2115,6 +2158,7 @@ showWordFeedback("");
 openMeaningModal(matchedWord);
 
 // Reveal the ending when all five words are found.
+
 if (
     dictionaryFound.size ===
     Object.keys(dictionaryWords).length
@@ -2148,7 +2192,6 @@ if (feedback) {
 }
 
 /* ===== CREATE THE SAVED MEANING ===== */
-
 function createDictionaryEntry(word) {
 const data = dictionaryWords[word];
 
@@ -2161,7 +2204,7 @@ heading.textContent = word;
 
 const partOfSpeech = document.createElement("span");
 partOfSpeech.className = "part-of-speech";
-partOfSpeech.textContent = "dictionary entry · a little memory";
+partOfSpeech.textContent = "dictionary entry ·";
 
 const definition = document.createElement("p");
 definition.className = "definition";
@@ -2169,7 +2212,7 @@ definition.textContent = "Definition: " + data.meaning;
 
 const hiddenMeaning = document.createElement("p");
 hiddenMeaning.className = "hidden-meaning";
-hiddenMeaning.textContent = "A meaning of our own: " + data.hidden;
+hiddenMeaning.textContent = "What I Mean: " + data.hidden;
 
 entry.appendChild(heading);
 entry.appendChild(partOfSpeech);
@@ -2209,9 +2252,6 @@ if (closeButton) {
 }
 
 }
-
-/* ===== CLOSE THE MEANING POPUP ===== */
-
 function closeMeaningModal() {
 const modal = document.getElementById("meaningModal");
 
@@ -2257,49 +2297,48 @@ if (
 /* ===== FINISH THE DICTIONARY ===== */
 
 function finishDictionary() {
+  document.querySelector('.continuation-button').hidden = true;
     showScreen("storyMysteryScreen");
 }
-
-// Build the grid when the page loads.
 startWordSearch();
   const missingWordQuestions = [
 {
-paragraph: 'Pada suatu hari yg panas, seekor gua menepi di pantai. Gua adalah mermet hejo yg tampan. Lalu saat sedang asik menikmati selai ubur-ubur, seorang nelayan baju merah kembang kembang datang dengan jala imutnya, sangat pede mengais ikan.',
+paragraph: 'Pada suatu hari yang panas, seekor gua menepi di pantai. Gua adalah mermet hejo yang tampan. Lalu saat sedang asik menikmati selai ubur-ubur, seorang nelayan baju merah kembang kembang datang dengan jala imutnya, sangat pede mengais ikan.',
 blank: 'ubur-ubur',
-before: 'Lalu saat sedang asik menikmati selai ',
-after: ', seorang nelayan baju merah kembang kembang datang dengan jala imutnya, sangat pede mengais ikan.',
+before: 'Pada suatu hari yang panas, seekor gua menepi di pantai. Gua adalah mermet hejo yang tampan. Lalu saat sedang asik menikmati selai ',
+after: ' seorang nelayan baju merah kembang kembang datang dengan jala imutnya, sangat pede mengais ikan.',
 choices: ['ikan', 'ubur-ubur', 'kerang'],
 answer: 'ubur-ubur'
 },
 {
 before: 'Gua melihat itu hanya bisa nahan ',
-after: ', apalagi gaya si nelayan saat ngais ikan itu agak aneh.',
+after: ', apalagi gaya si nelayan saat ngais ikan itu agak aneh. Sambil geal geolin pantat semoknya, dia sok cantik memasuk keluarkan (bruh) jalanya ke laut yang dangkal. Mana dapet egek, kata gua dalam hati.',
 choices: ['ngantuk', 'nangis', 'ngakak'],
 answer: 'ngakak'
 },
 {
-before: 'Sambil geal geolin pantat semoknya, dia sok cantik memasuk keluarkan jalanya ke laut yang ',
-after: '. Mana dapet egek, kata gua dalam hati.',
-choices: ['dangkal', 'dalam', 'keruh'],
-answer: 'dangkal'
+before: 'Cukup lama si nelayan semok begitu, sampe gak lama kemudian jalanya kebawa ombak, entah karna tangannya yang geter kecapean atau emang ombak yang terlalu kuat hantam doi. Alhasil si nelayan cuma bisa ',
+after: ' saat jalanya menghilang, gak tau kemana.',
+choices: ['bengong', 'diem', 'monyong'],
+answer: 'bengong'
 },
 {
-before: 'Cukup lama si nelayan semok begitu, sampe gak lama kemudian jalanya kebawa ',
-after: ', entah karna tangannya yg geter kecapean atau emang ombak yg terlalu kuat hantam doi.',
-choices: ['ikan', 'ombak', 'angin'],
-answer: 'ombak'
+before: 'Ngelihat itu, akhirnya gua gak bisa nahan ngakak. Dan gara gara ketawa gua yang gak sengaja kekencengan, si nelayan notice kalo ada gua di pantai itu. Dia nengok ke arah gua yang masih asik berjemur, ya karna gua mermet a.k.a separuh',
+after: ', si nelayan kayaknya agak kaget. Dia terkesiap, sambil ngumpat, "ih itu apaan anjing".',
+choices: ['ikan', 'penyu', 'ayam'],
+answer: 'ikan'
 },
 {
-before: 'Meski kaget dan kayak agak takut, si nelayan semok anehnya ',
-after: ' deketin gua.',
-choices: ['kabur', 'malah', 'gak jadi'],
-answer: 'malah'
+before: 'Meski kaget dan kayak agak takut, si nelayan',
+after: ' anehnya maleh deketin gua. Makin deket doi ke tempat gua, makin jelaslah rupa parasnya. Bukan cuma badannya yang asoy coy, mukanya juga mantep ternyata.',
+choices: ['imut', 'semok', 'lucu'],
+answer: 'semok'
 },
 {
-before: 'Tone kulitnya sendiri putih ke ',
-after: ' mpink mpink an, sehat terhidrasi meski lumayan lama di bawah matahari.',
-choices: ['ijo', 'biru', 'mpink'],
-answer: 'mpink'
+before: ' Tone kulitnya sendiri putih ke mpink mpink an, sehat terhidrasi meski lumayan lama di bawah',
+after: '. Matanya bulet tapi sipit, bening banget kayak gak pernah ngeliat maksiat. Terus bibirnya merah, penuh, lembab, kenyal, kayak...enak....(?) ',
+choices: ['matahari', 'panas', 'terik'],
+answer: 'matahari'
 }
 ];
 
@@ -2309,7 +2348,7 @@ let storyAnswerLocked = false;
 function startStoryMystery() {
 currentStoryQuestion = 0;
 storyAnswerLocked = false;
-
+document.querySelector('.continuation-button').hidden = true;
 document.getElementById('storyStart').hidden = true;
 document.getElementById('storyReward').hidden = true;
 document.getElementById('storyContinuation').hidden = true;
@@ -2340,7 +2379,6 @@ paragraph.innerHTML = '';
 paragraph.appendChild(
     document.createTextNode(question.before)
 );
-
 const blank = document.createElement('span');
 blank.className = 'story-blank';
 blank.textContent = '______';
@@ -2393,9 +2431,8 @@ if (choice === question.answer) {
 
     document.querySelector('.story-blank').textContent = question.answer;
 
-    feedback.textContent = 'Correct! The story remembers you. ♡';
-
-    setTimeout(function() {
+    feedback.textContent = 'Correct! You remember it ♡';
+setTimeout(function() {
         currentStoryQuestion++;
 
         if (currentStoryQuestion >= missingWordQuestions.length) {
@@ -2408,7 +2445,7 @@ if (choice === question.answer) {
 } else {
     button.classList.add('incorrect');
     feedback.textContent =
-        'Oops! That word doesn’t belong here. Try reading the original story again. ♡';
+        'Oops! That word doesn’t belong here ♡';
 
     document.getElementById('storyWrongActions').hidden = false;
 }
@@ -2420,6 +2457,9 @@ renderStoryQuestion();
 }
 
 function finishStoryMystery() {
+document.getElementById('storyEyebrow').hidden = true;
+document.getElementById('storyTitle').hidden = true;
+document.querySelector('.continuation-button').hidden = true;
 document.getElementById('storyGame').hidden = true;
 document.getElementById('storyReward').hidden = false;
 document.getElementById('storyContinuation').hidden = true;
@@ -2431,8 +2471,8 @@ document.getElementById('storyReward').scrollIntoView({
 
 }
 
-function openStoryContinuation() {
-document.getElementById('storyReward').hidden = true;
+function openStoryContinuation() {document.getElementById('storyReward').hidden = true;
+document.querySelector('.continuation-button').hidden = false;
 document.getElementById('storyContinuation').hidden = false;
 
 document.getElementById('storyContinuation').scrollIntoView({
@@ -2441,5 +2481,267 @@ document.getElementById('storyContinuation').scrollIntoView({
 });
 
 }
-</script></body>
+  function openLastPage() {
+    document.getElementById('storyMysteryScreen').classList.add('hidden');
+
+    const lastPage = document.getElementById('lastPageScreen');
+    lastPage.classList.remove('hidden');
+
+    lastPage.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+  }
+  
+const archiveChapters = [
+    {
+        title: "The 100 Reasons Why",
+        reasons: [
+            "Because you're effortlessly interesting, (i've noticed this since the very beginning, btw)",
+            "Because I like listening to your stories, even the most random ones, (i'm ur number one fan and listener!)",
+            "Because your little reactions are worth remembering, (what is it about u that isn't worth remembering?)",
+            "Because you can make an ordinary conversation feel special, (honestly, there's nothing ordinary about u :1)",
+          "Because I enjoy discovering little things about you, (u make me look forward to tomorrow, owyeah)",
+          "Because your presence has its own kind of comfort, (tho u can be pretty annoying sometimes, too :1)",
+"Because I like the way you express yourself, (that was cute..um...u're cute..)",
+  "Because your random thoughts deserve their own audience, (it's my plesure!)",
+          "Because you have a way of making me curious about your day, (so how's ur day? :1)",
+          "Because I genuinely enjoy hearing from you, (i'm all ears!)",
+          "Because even your simplest messages can make my day a little better, (this one is so...cringe...but yeah...don't feel pressure!)",
+          "Because I like your sense of humor, (hey, we're kinda compatible in this)",
+          "Because your little habits are oddly endearing, (especially that typo things...)",
+          "Because you don't have to try hard to be memorable, (let it be me who tries...um...hard?)",
+          "Because I like seeing different sides of you, (except for that scary one...u know?)",
+          "Because your opinions are interesting to hear, (it's absolutely 'sksk hrm')",
+          "Because I enjoy the little details you share without thinking twice, (lem koryah, sajadah, ayam Kate, etc :1)",
+          "Because you make me appreciate ordinary moments, (i'll appreciate everything that comes ur way)",
+"Because I like how you can be unexpectedly funny, (actually, u're funny all the time)",
+"Because there's always something new to learn about you, (guru...)",
+"Because your existence makes certain days more interesting, (/bowing...)",
+"Because I like the way you tell stories, (don't feel pressure 02!)",
+"Because I remember little things you probably forgot you told me, (what is it about u that i haven't remembered?)",
+"Because you have your own way of making conversations feel alive, (this is what actually makes woaini :1)",
+"Because I like your unfiltered little moments, (i don't love u for somebody u're not)"]
+    },
+{
+        title: "The 100 Reasons Why",
+        reasons: [
+            "Because even your complaints can be entertaining, (that's why i love teasing u)",
+            "Because I enjoy your company, regardless of the topic, (ngl, u're a good companion)",
+"Because you have a personality I never get tired of discovering, (u're sometime very hard to read, but that's what makes it challenging)",
+"Because I like the little surprises that come with knowing you, (u make me go 'deg' in so many different ways)",
+"Because you're not just someone I talk to, but someone I want to know, (um...hi i guess :1)",
+"Because your laughter is something worth appreciating, (even tho i gotta figure it out just from that 'WKWKWKS' :1)",
+"Because I like how you react to things, (it's so lovely)",
+"Because you make me curious about the things you love, (tell me more, please..)",
+"Because I enjoy hearing about your interests, (this one too, please..)",
+"Because you have little quirks that make you unmistakably you, (harumi h nya harumi)",
+"Because I like your way of thinking, (that's quite unique, n i'm not even joking)",
+"Because your presence doesn't need an occasion, (thanks for being here with me)",
+"Because I appreciate the little time you make for me, (no matter how little it is, i appreciate it, thanks my ehm)",
+"Because I like the way you make even mundane things worth sharing, (share more with me...)",
+"Because you're interesting without having to prove anything, (maybe u can prove me wrong :1)",
+"Because I like the little pieces of your day that you let me see, (i wanna see more...)",
+"Because your messages are always something I look forward to, (damnit)",
+"Because I enjoy the unpredictability of our conversations, (i love how we always end up forgetting what we were talking about in the first place)",
+"Because I like knowing what's going on inside that head of yours, (i'm a mind reader, ain't i? :1)",
+"Because you make me want to pay attention to the smallest details (i'm an attention giver, so i absolutely love that)",
+"Because I like your particular kind of chaos, (it's adorable in its own way)",
+"Because you can be sweet in ways you probably don't notice, (stay oblivious!)",
+"Because I appreciate the person you are when nobody's asking you to be anything, (just being harumi is more than enough)",
+"Because there's something lovely about your ordinary self, (even tho, u're already extraordinary in ur own way)",
+"Because all these little things add up to someone I adore, (owyeah...)"
+        ]
+    },
+
+    {
+        title: "The 100 Reasons Why",
+        reasons: [
+            "Because you're you. That's already enough, (reaaalllyyy)",
+            "Because I don't always need a reason to think about you, (24/7 i'm thinking about ehm) ",
+          "Because sometimes, I just want you around, (a..round? ehm)",
+"Because I could be doing absolutely nothing and still wish you were there to witness it, (wait...this doesn't sound right :1)",
+"Because I like having you in my little corner of the world, (just me n my, imaginatioon, owuowuoo)",
+"Because I don't need every conversation to be meaningful to enjoy talking to you, (minumairlu!)",
+"Because I can miss you without having anything particular to miss, (i'm missing u rn, oh harumi...)",
+"Because you're someone I'd choose to tell the most insignificant things to, (i wasn't planning on having too much coffee today..)",
+"Because I don't need an exciting day to want to share it with you, (jgnterlalueksaititit)",
+"Because sometimes your name is enough to make me pause, (heyy, it's supposed to be a secret..)",
+"Because I like the thought of you, (don't ask me what thoughts i've had!)",
+"Because I don't need a special occasion to appreciate you, (u're the special occasion)",
+"Because you're worth remembering, even in the middle of an ordinary day, (/remembering hrm)",
+"Because I want to know how your day went, even if nothing happened, (i couldn't ask it sometimes cause the question seems too basic :1)",
+"Because I can think of you for no apparent reason and be perfectly fine with that, (why wouldn't i?)",
+"Because not every feeling needs a complicated explanation, (hhh, it's been complicated in it's own way :1)",
+"Because I like the idea of you being happy, even when I'm not the reason, (please, be happy, harumih)",
+"Because I don't have to be doing something with you to appreciate having you around, (u can have ur me time, and i'll still be like,'oh, harumi...')",
+"Because sometimes, silence doesn't make me want to leave, (dingintetapitidakkejam)",
+"Because I like knowing that somewhere in this world, there's a Harumi being Harumi, (:1)",
+"Because I don't need you to entertain me, (harumi sm entertaiment)",
+"Because I can enjoy the thought of you without needing anything in return, (don't.ask.me.what.thoughts.)",
+"Because you don't have to be extraordinary to be special to me, (unfortunately, u're always extraordinary)",
+"Because I like you on the days when there's nothing particularly likable happening, (it's thanks to u that my days feel more likable)",
+"Because my appreciation for you isn't dependent on how interesting your day is, (wish u all the good and interesting days ahead)."
+        ]
+    },
+    {
+        title: "The 100 Reasons Why",
+        reasons: [
+            "Because I don't need a perfect version of you, (u're beyond perfect)",
+            "Because I like the thought of knowing you a little longer, (long live, long last, long xinlongie)",
+          "Because some people are simply nice to have in one's life, and you're one of them, (i want u in all my life, if it's even possible)",
+"Because I don't always know what to say, but I still want to say something to you, (say say sayang :1)",
+"Because I can have a quiet day and still care just as much, (kadang cpk ngetik jugalah saya mi, but even at that time saya kan utamakan)",
+"Because I don't need to count how many messages we exchange to know that I appreciate you, (/menghitung sometimes; tercengang atas kebacotan)",
+"Because you're not a conversation I have to keep alive; you're a person I genuinely want to know, (harumi alhamdulillah alive sendiri)",
+"Because I like you beyond the things you can offer, (hrm bukan bola di offer offer)",
+"Because I don't need you to be available every second, (agak bhg karna nanti gua meninggal karna two seconds without u like two months, n it's too much, ey tapi no pressure!)",
+"Because I hope life gives you plenty of reasons to smile, (ini genuinely...)",
+"Because I like the fact that you're part of my story, however ordinary some chapters may be, (kalo soal hrm gak ada yang ordinary)",
+"Because I don't need to turn every little moment into something grand, (grand prize?)",
+"Because even the thought of you can be enough for a moment, (a. moment.'a' moment. A. moment)",
+"Because I want good things for you, whether or not I get to witness them all, (still would be better if i get to witness them tho)",
+"Because I don't need to understand every little thing about you to appreciate you, (harumit)",
+"Because I like the person you're becoming, (akus dibalik)",
+"Because there's no expiration date on appreciating someone, (emang sari roti, cepet ekspaiyet)",
+"Because I can be quiet without having less affection for you, (nanti tapi hrm geter kalo saya diem)",
+"Because I don't need to make a spectacle out of every feeling, (apa ini dah, aduh ngantuklah guami)",
+"Because I like having someone like you to think fondly of, (awokwokwok buaya!)",
+"Because some days, the simplest reason is the truest one, (trust me before i thrust u, owyeah :1)",
+"Because I wouldn't trade knowing you for another random encounter, (emang crypto, batreding treding)",
+"Because you make the word 'someone' feel a little more specific, (ini gua ngetik pas apalah cok)",
+"Because even after all these words, I still have more to say, (owyeah bener tuh, tapi ini aja udah teler lu, jawa!)",
+"Because, well, it's you. What else do you want me to say?, (say it, say it, sapamit)"
+        ]
+    }
+];
+
+
+let currentArchiveChapter = 0;
+
+function openArchive() {
+    document.getElementById('lastPageScreen').classList.add('hidden');
+    document.getElementById('archiveScreen').classList.remove('hidden');
+
+    document.getElementById('archiveScreen').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+}
+function openArchiveChapter(chapterIndex) {
+    currentArchiveChapter = chapterIndex - 1;
+
+    document.getElementById('archiveScreen').classList.add('hidden');
+    document.getElementById('archiveChapterScreen').classList.remove('hidden');
+
+    renderArchiveChapter();
+
+    document.getElementById('archiveChapterScreen').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+}
+
+function renderArchiveChapter() {
+    const chapter = archiveChapters[currentArchiveChapter];
+
+    document.getElementById('archiveChapterNumber').textContent =
+    "COLLECTION " + String(currentArchiveChapter + 1).padStart(2, '0');
+    document.getElementById('archiveChapterTitle').textContent =
+        chapter.title;
+
+    document.getElementById('archiveChapterIntro').textContent =
+        chapter.intro;
+
+    const reasonContainer = document.getElementById('archiveReasons');
+    reasonContainer.innerHTML = '';
+
+    chapter.reasons.forEach((reason, index) => {
+        const card = document.createElement('div');
+        card.className = 'archive-reason-card';
+
+        const number = document.createElement('span');
+        number.className = 'reason-number';
+        number.textContent = String(
+            currentArchiveChapter * 25 + index + 1
+        ).padStart(3, '0');
+
+        const text = document.createElement('p');
+        text.className = 'reason-text';
+        text.textContent = reason;
+
+        card.appendChild(number);
+        card.appendChild(text);
+        reasonContainer.appendChild(card);
+    });
+
+    const nextButton = document.querySelector('.archive-next');
+
+    nextButton.textContent =
+        currentArchiveChapter === 3
+            ? 'Finish the Archive'
+            : 'Next Collection →';
+}
+
+function backToArchive() {
+    document.getElementById('archiveChapterScreen').classList.add('hidden');
+    document.getElementById('archiveScreen').classList.remove('hidden');
+
+    document.getElementById('archiveScreen').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+}
+function nextArchiveChapter() {
+    if (currentArchiveChapter === 3) {
+        document.getElementById('archiveChapterScreen').classList.add('hidden');
+        document.getElementById('archiveEnding').hidden = false;
+
+        document.getElementById('archiveEnding').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+
+        return;
+    }
+
+    currentArchiveChapter++;
+
+    renderArchiveChapter();
+
+    document.getElementById('archiveChapterScreen').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+}
+
+</script>
+<!-- POP-UP MEANING -->
+<div id="meaningModal" class="meaning-modal"
+     role="dialog" aria-modal="true"
+     aria-labelledby="modalWord" hidden>
+
+    <div class="meaning-card">
+
+        <p class="chapter-label"> 🍀 A WORD DISCOVERED 🍀 </p>
+
+        <h2 id="modalWord"></h2>
+
+        <p class="part-of-speech">Definition</p>
+
+        <p id="modalDefinition" class="modal-definition"></p>
+
+        <div class="modal-hidden-meaning">
+            <p class="part-of-speech">What I Mean </p>
+            <p id="modalHiddenMeaning"></p>
+        </div>
+
+        <button type="button" class="garden-button"
+                onclick="closeMeaningModal()">
+            Keep this meaning
+        </button>
+
+    </div>
+
+</div></body>
 </html>
